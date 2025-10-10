@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Ahad | Terminal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Optional: Smooth scrolling for the navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom font for a code feel */
+        .font-code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        /* --- Global Styling --- */
+        :root {
+            --neon-green: #39ff14; /* Electric Green */
+            --dark-bg: #0A0A0A; /* Deep Black */
+            --mid-bg: #1A1A1A;  /* Dark Gray */
+        }
+
+        .text-neon { color: var(--neon-green); }
+        .bg-dark-grid { background-color: var(--dark-bg); }
+
+        /* Neon Glow Utility */
+        .shadow-neon {
+            box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+        }
+        .text-shadow-neon {
+            text-shadow: 0 0 3px var(--neon-green), 0 0 8px rgba(57, 255, 20, 0.5);
+        }
+        .hover\:shadow-neon-lg:hover {
+             box-shadow: 0 0 10px var(--neon-green), 0 0 25px var(--neon-green);
+        }
+
+        /* Grid Background for Hero Section */
+        .hero-bg-grid {
+            background-color: var(--dark-bg);
+            background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent),
+                             linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+
+        /* Typing Cursor Style */
+        .typing-cursor {
+            display: inline-block;
+            animation: blink 0.7s infinite;
+            visibility: visible;
+            color: var(--neon-green);
+            text-shadow: 0 0 2px var(--neon-green);
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Glitch/Hacker Text Effect for Main Name */
+        .hacker-text {
+            animation: glitch 1.5s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0, 0); text-shadow: 2px 0 var(--neon-green), -2px 0 #FF00FF; }
+            25% { transform: translate(-1px, 1px); text-shadow: -1px 0 var(--neon-green), 1px 0 #FF00FF; }
+            50% { transform: translate(1px, -1px); text-shadow: 3px 0 var(--neon-green), -3px 0 #FF00FF; }
+            75% { transform: translate(-1px, 0); text-shadow: -1px 0 var(--neon-green), 1px 0 #FF00FF; }
+            100% { transform: translate(0, 0); text-shadow: 2px 0 var(--neon-green), -2px 0 #FF00FF; }
+        }
+
+        /* --- PRELOADER STYLES --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Align text to the left */
+            padding-left: 10vw;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader-line {
+            color: var(--neon-green);
+            font-size: 1.1rem;
+            text-shadow: 0 0 2px rgba(57, 255, 20, 0.5);
+            margin-bottom: 5px;
+            opacity: 0; /* Start hidden */
+            animation: bootup 0.1s forwards; /* Use bootup animation */
+        }
+
+        /* Sequential Animation for Bootup Text */
+        @keyframes bootup {
+            to { opacity: 1; }
+        }
+
+        /* Delay the appearance of each line */
+        .preloader-line:nth-child(1) { animation-delay: 0.2s; }
+        .preloader-line:nth-child(2) { animation-delay: 0.4s; }
+        .preloader-line:nth-child(3) { animation-delay: 0.6s; }
+        .preloader-line:nth-child(4) { animation-delay: 0.8s; }
+        .preloader-line:nth-child(5) { animation-delay: 1.2s; }
+        .preloader-line:nth-child(6) { animation-delay: 1.8s; }
+
+        /* NEW: Styling and delay for the final welcome message */
+        .preloader-line:nth-child(7) {
+            animation-delay: 2.2s;
+            font-size: 2.5rem; /* Larger text */
+            margin-top: 1.5rem;
+            color: #fff; /* Make it white or brighter for emphasis */
+            text-shadow: 0 0 5px var(--neon-green), 0 0 15px var(--neon-green);
+        }
+
+
+        /* Loading Dots for the final line */
+        .preloader-dots::after {
+            content: '';
+            animation: dots 2s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: '....'; }
+        }
+
+        /* Optional: Hide scrollbar during preload */
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        /* New: Utility for initially hidden projects (using display: none) */
+        .project-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-dark-grid text-gray-100 font-code no-scroll">
+
+    <div id="preloader">
+        <p class="preloader-line">:: BOOT SEQUENCE INITIATED ::</p>
+        <p class="preloader-line">INIT: /usr/bin/load_kernel - 0.0001s [OK]</p>
+        <p class="preloader-line">DRV: Loading core modules... [DONE]</p>
+        <p class="preloader-line">NET: Establishing secure connection... [200 OK]</p>
+        <p class="preloader-line">FSK: Scanning local data structures... [CLEAN]</p>
+        <p class="preloader-line">PORTFOLIO.EXE: Checking dependencies... [COMPLETE]</p>
+
+        <p class="preloader-line">WELCOME TO ABDUL AHAD PORTFOLIO</p>
+    </div>
+    <header class="sticky top-0 z-50 bg-mid-bg shadow-lg border-b border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">
+                [root@ahad] $
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-gray-400 hover:text-neon transition duration-300">HOME</a>
+                <a href="#skills" class="text-gray-400 hover:text-neon transition duration-300">SKILLS</a>
+                <a href="#projects" class="text-gray-400 hover:text-neon transition duration-300">PROJECTS</a>
+                <a href="#contact" class="text-gray-400 hover:text-neon transition duration-300">CONTACT</a>
+            </div>
+
+            <button class="md:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="#hero" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">HOME</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">SKILLS</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">PROJECTS</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="py-20 md:py-32 hero-bg-grid border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0" data-aos="fade-right">
+                    <p class="text-lg text-neon font-semibold uppercase tracking-wider">// STATUS: ONLINE</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-50 mt-2 font-code hacker-text">
+                        Abdul Ahad
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-400 mt-4 font-light">
+                        > Role: <span id="typing-text" class="font-medium text-neon text-shadow-neon"></span><span class="typing-cursor">█</span>
+                    </h2>
+                    <p class="text-gray-500 mt-6 max-w-lg mx-auto md:mx-0 font-code">
+                        // COMMIT MESSAGE: Focused on elegant, efficient, and scalable web solutions. Let's execute the next mission.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 transform hover:scale-105 border-2 border-neon">
+                            VIEW WORK (EXECUTE)
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-mid-bg hover:shadow-neon transition duration-300 transform hover:scale-105">
+                            GET IN TOUCH
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3" data-aos="fade-left">
+    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-mid-bg border-4 border-neon shadow-neon rounded-full flex items-center justify-center overflow-hidden">
+        <img src="abc.png" alt="Abdul Ahad's Professional Avatar" class="object-cover h-full w-full">
+    </div>
+</div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 md:py-24 bg-mid-bg border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-neon text-shadow-neon" data-aos="fade-up">Core Skills: [Loaded]</h2>
+                <p class="mt-4 text-xl text-gray-400 font-code" data-aos="fade-up" data-aos-delay="200">// MODULES.list()</p>
+
+                <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="100">
+                        <div class="text-4xl text-orange-500 mb-3">🛠️</div>
+                        <h3 class="text-lg font-semibold text-gray-50">HTML/CSS</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">Markup.render()</p>
+                    </div>
+
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="200">
+                        <div class="text-4xl text-yellow-400 mb-3">⚡</div>
+                        <h3 class="text-lg font-semibold text-gray-50">JS (ES6+)</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">Logic.execute()</p>
+                    </div>
+
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="300">
+                        <div class="text-4xl text-neon mb-3">⚛️</div>
+                        <h3 class="text-lg font-semibold text-gray-50">React.js</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">UI.Component()</p>
+                    </div>
+
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="400">
+                        <div class="text-4xl text-green-500 mb-3">🟢</div>
+                        <h3 class="text-lg font-semibold text-gray-50">Laravel</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">Server.Init()</p>
+                    </div>
+
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="500">
+                        <div class="text-4xl text-teal-400 mb-3">🎨</div>
+                        <h3 class="text-lg font-semibold text-gray-50">Tailwind</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">Style.Utility()</p>
+                    </div>
+
+                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="600">
+                        <div class="text-4xl text-red-500 mb-3">🗄️</div>
+                        <h3 class="text-lg font-semibold text-gray-50">DB Ops</h3>
+                        <p class="text-sm text-gray-400 mt-1 font-code">Data.Model()</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 md:py-24 bg-dark-grid border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-neon text-shadow-neon" data-aos="zoom-in-up">Project Log: Latest Missions</h2>
+                <p class="mt-4 text-xl text-gray-400 font-code" data-aos="zoom-in-up" data-aos-delay="200">// FETCHING RESULTS FROM DATABASE...</p>
+
+                <div id="project-list" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-neon font-bold font-code border-b border-neon">ECOM_PLATFORM v1.2</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">E-commerce Platform</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// High-throughput shopping cart with secure payment integration (API level 4).</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
+                                <span class="bg-gray-700 text-green-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NODE</span>
+                                <span class="bg-gray-700 text-red-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">MONGO</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-teal-400 font-bold font-code border-b border-teal-400">TASK_MANAGER v3.0</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Task Management App</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Minimalistic task interface with local persistence. Optimized for low-latency updates.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-teal-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">VUE</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TAILWIND</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="600">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-yellow-400 font-bold font-code border-b border-yellow-400">API_DOCS v1.0</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">API Documentation Site</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Auto-generated documentation site. Enabled high-speed client-side searching.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-yellow-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NEXT.JS</span>
+                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REST</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-cyan-400 font-bold font-code border-b border-cyan-400">DOMAIN_REG v1.0</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Domain Registration Portal</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Integrated with third-party registry APIs for real-time domain checking and purchasing.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-green-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LARAVEL</span>
+                                <span class="bg-gray-700 text-cyan-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">API</span>
+                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">PAYMENTS</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-orange-400 font-bold font-code border-b border-orange-400">CRM_SUITE v2.5</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Customer Relationship Mgmt (CRM)</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Full-featured system for lead tracking, sales funnels, and customer support ticketing.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
+                                <span class="bg-gray-700 text-blue-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REDUX</span>
+                                <span class="bg-gray-700 text-green-600 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">SQL</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="400">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-purple-400 font-bold font-code border-b border-purple-400">PROJECT_MANAGER v1.1</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Agile Project Management Tool</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Kanban board interface with real-time updates, task assignments, and reporting features.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-teal-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">VUE.JS</span>
+                                <span class="bg-gray-700 text-purple-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">FIREBASE</span>
+                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">WEBPACK</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="600">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-pink-400 font-bold font-code border-b border-pink-400">HR_PORTAL v3.2</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">HR & Employee Portal</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Secure employee management system with payroll, time-off requests, and role-based access control.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-green-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LARAVEL</span>
+                                <span class="bg-gray-700 text-pink-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LIVEWIRE</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">BLADE</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="800">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-lime-400 font-bold font-code border-b border-lime-400">HOSTING_SELLER v1.0</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Hosting Seller/Client Portal</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Client billing, package management, and server status monitoring interface.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-yellow-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NEXT.JS</span>
+                                <span class="bg-gray-700 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TRPC</span>
+                                <span class="bg-gray-700 text-lime-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">PRISMA</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="h-48 bg-gray-800 flex items-center justify-center text-purple-400 font-bold font-code border-b border-purple-400">CMS_FRONTEND v4.0</div>
+                        <div class="p-6 text-left">
+                            <h3 class="text-2xl font-bold text-gray-50 font-code">Headless CMS Interface</h3>
+                            <p class="mt-2 text-gray-400 text-sm">// Fully responsive frontend for content management. Utilizes GraphQL for data fetching.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
+                                <span class="bg-gray-700 text-pink-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">GRAPHQL</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TAILWIND</span>
+                            </div>
+                            <div class="mt-5 flex space-x-4">
+                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+                <div class="mt-12">
+                    <button id="loadMoreButton" onclick="loadMoreProjects()" class="px-8 py-3 text-lg font-semibold border-2 border-neon text-neon rounded-sm shadow-neon hover:bg-neon hover:text-gray-900 transition duration-300 font-code">
+                        VIEW ALL &gt;&gt;
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-mid-bg"
+                data-aos="fade-in">
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center" data-aos="fade-up">
+                        <h2
+                            class="text-4xl font-extrabold text-neon text-shadow-neon">SEND_MESSAGE(
+                            )</h2>
+                        <p class="mt-4 text-xl text-gray-400 font-code">//
+                            Initializing secure connection for contact.</p>
+                    </div>
+
+                    <form id="contactForm" class="mt-12 space-y-6">
+                        <div class="field-wrapper">
+                            <input type="text" name="user_name"
+                                id="user_name"
+                                placeholder="> Enter Name..." required
+                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200">
+                        </div>
+
+                        <div class="field-wrapper">
+                            <input type="email" name="user_email"
+                                id="user_email"
+                                placeholder="> Enter Email..." required
+                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200">
+                        </div>
+
+                        <div class="field-wrapper">
+                            <textarea name="message" id="message"
+                                placeholder="> Enter Message..." required
+                                rows="6"
+                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200 resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full mt-4 px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 transform hover:scale-[1.01] border-2 border-neon font-code uppercase">
+                            EXECUTE SEND &gt;&gt;
+                        </button>
+
+                        <div id="statusMessage" class="mt-4 text-center font-code text-neon font-medium"></div>
+
+                    </form>
+
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                    <script>
+                        (function () {
+                            emailjs.init("mbxUJJfUrV8luhFyL"); // 👈 your EmailJS Public key
+                        })();
+
+                        document.getElementById('contactForm').addEventListener('submit', function (event) {
+                            event.preventDefault();
+                            const statusMessage = document.getElementById('statusMessage');
+                            const submitButton = this.querySelector('button[type="submit"]');
+
+                            statusMessage.textContent = 'STATUS: Sending...';
+                            submitButton.disabled = true;
+                            submitButton.textContent = 'Processing...';
+
+                            emailjs.sendForm('service_76bse1v', 'template_lzfq78a', this)
+                                .then(() => {
+                                    statusMessage.textContent = '✅ MESSAGE SENT. AWAITING RESPONSE...';
+
+                                    // Clear form after successful submission
+                                    this.reset();
+
+                                    submitButton.disabled = false;
+                                    submitButton.textContent = 'EXECUTE SEND >>';
+                                }, (error) => {
+                                    console.error('❌ FAILED...', error);
+                                    statusMessage.textContent = '❌ ERROR: FAILED TO SEND. Check console for details.';
+                                    submitButton.disabled = false;
+                                    submitButton.textContent = 'EXECUTE SEND >>';
+                                });
+                        });
+                    </script>
+
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="bg-dark-grid border-t-2 border-neon shadow-neon">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center font-code">
+            <p class="text-neon text-sm">> LOG: Footer initialized. Status: OK. Time: 2025</p>
+            <div class="mt-4 flex justify-center space-x-6" data-aos="fade-up">
+                <a href="#" class="text-gray-500 hover:text-neon transition duration-300">[linkedin]</a>
+                <a href="#" class="text-gray-500 hover:text-neon transition duration-300">[github]</a>
+                <a href="mailto:youremail@example.com" class="text-gray-500 hover:text-neon transition duration-300">[email]</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            disable: 'mobile'
+        });
+    </script>
+
+    <script>
+        // --- Preloader & Typing Animation Scripts (Original) ---
+
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            const body = document.body;
+
+            // Wait for 3.5 seconds (longer than the animation sequence) before fading out.
+            const totalLoadTime = 3500;
+
+            setTimeout(function() {
+                // Fades out the preloader
+                preloader.style.opacity = '0';
+
+                // Wait for the fade-out transition, then remove it
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                    body.classList.remove('no-scroll'); // Re-enable scrolling
+
+                    // Start the typing animation once the page is fully loaded and visible
+                    initTypingAnimation();
+                }, 500); // Matches the CSS transition duration
+            }, totalLoadTime);
+        });
+
+        // Function to initialize the typing animation
+        function initTypingAnimation() {
+            const typingTextElement = document.getElementById('typing-text');
+            const words = ["Full-Stack Developer", "Software Engineer", "Systems Architect", "React Specialist"];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+
+                if (isDeleting) {
+                    typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 75 : 150;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typeSpeed = 1500;
+                    isDeleting = true;
+                }
+                else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(type, typeSpeed);
+            }
+
+            // Start the typing sequence
+            type();
+        }
+
+
+        // --- Corrected Projects 'Load More' Script ---
+
+        let allProjectsLoaded = false;
+
+        function loadMoreProjects() {
+            // Select all project cards starting from the 4th element (the ones we want to hide/show)
+            const allExtraProjects = document.querySelectorAll('.project-card:nth-child(n+4)');
+            const loadMoreButton = document.getElementById('loadMoreButton');
+
+            if (!allProjectsLoaded) {
+                // ACTION: SHOW PROJECTS
+
+                // 1. Reveal all hidden projects
+                allExtraProjects.forEach((project) => {
+                    // Remove the class that hides them
+                    project.classList.remove('project-hidden');
+                });
+
+                // Re-run AOS.refresh() once after showing all to apply animations
+                AOS.refresh();
+
+                // 2. Update button to "HIDE" mode
+                loadMoreButton.textContent = '<< HIDE PROJECTS';
+                // Remove green neon styles
+                loadMoreButton.classList.remove('text-neon', 'border-neon', 'hover:bg-neon', 'hover:text-gray-900', 'shadow-neon');
+                // Add muted gray styles
+                loadMoreButton.classList.add('bg-gray-700', 'text-gray-400', 'border-gray-700', 'hover:bg-gray-700/80', 'shadow-lg');
+
+                allProjectsLoaded = true;
+
+            } else {
+                // ACTION: HIDE PROJECTS
+
+                // 1. Hide the extra projects
+                allExtraProjects.forEach(project => {
+                    project.classList.add('project-hidden');
+                });
+
+                // 2. Update button back to "VIEW ALL" mode
+                loadMoreButton.textContent = 'VIEW ALL >>';
+                // Remove muted gray styles
+                loadMoreButton.classList.remove('bg-gray-700', 'text-gray-400', 'border-gray-700', 'hover:bg-gray-700/80', 'shadow-lg');
+                // Add green neon styles
+                loadMoreButton.classList.add('text-neon', 'border-neon', 'hover:bg-neon', 'hover:text-gray-900', 'shadow-neon');
+
+                allProjectsLoaded = false;
+
+                // 3. Scroll back to the top of the project section (optional but nice UX)
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // --- NEW: Mobile Menu Toggle Function ---
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // The 'hidden' Tailwind class maps to 'display: none'.
+            // The toggle checks if the class is present and removes/adds it.
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
