@@ -3,167 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abdul Ahad is a professional Web Developer and Laravel Developer creating modern, responsive websites and web applications. View portfolio, skills, and projects." />
- <meta name="keywords" content="Abdul Ahad, Web Developer, Laravel Developer, Portfolio Website, Full Stack Developer, Web Designer, PHP Developer, Software Developer, Freelancer Pakistan" />
+    <meta name="description" content="Full-stack web development and digital solutions from Lahore, Pakistan. Websites, web apps, eCommerce, APIs, Laravel, React, Nuxt and SEO for businesses worldwide.">
+    <meta name="keywords" content="full stack developer Pakistan, web development Lahore, Laravel developer Pakistan, React developer Pakistan, custom web application, API development Pakistan, eCommerce development Pakistan">
+    <meta name="author" content="Abdul Ahad">
+    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph (Social Media Preview) -->
-    <meta property="og:title" content="Abdul Ahad – Web Developer & Laravel Developer" />
-    <meta property="og:description" content="Portfolio of Abdul Ahad, a professional Web & Laravel Developer. Explore skills, projects, and contact info." />
-    <meta property="og:image" content="https://abdulahad381.me/your-preview-image.jpg" />
-    <meta property="og:url" content="https://abdulahad381.me" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full-Stack Web Development &amp; Digital Solutions | Abdul Ahad">
+    <meta property="og:description" content="Modern websites, web applications, eCommerce platforms, APIs and business software. Serving clients in Pakistan and worldwide.">
+    <meta property="og:image" content="https://abdulahad381.me/abc.png">
+    <meta property="og:url" content="https://abdulahad381.me/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Abdul Ahad — Full-Stack Development">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Abdul Ahad – Web Developer | Laravel Developer" />
-    <meta name="twitter:description" content="Explore Abdul Ahad's portfolio — Web Developer, Laravel Expert, and Designer." />
-    <meta name="twitter:image" content="https://abdulahad381.me/your-preview-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Full-Stack Web Development &amp; Digital Solutions | Abdul Ahad">
+    <meta name="twitter:description" content="Websites, web apps, eCommerce, APIs and custom software. Lahore, Pakistan — clients worldwide.">
+    <meta name="twitter:image" content="https://abdulahad381.me/abc.png">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://abdulahad381.me" />
+    <link rel="canonical" href="https://abdulahad381.me/">
+    <link rel="icon" type="image/png" href="/abc.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-   <title>Abdul Ahad – Web Developer | Laravel Developer | Portfolio</title>
+    <title>Full-Stack Web Development &amp; Digital Solutions | Abdul Ahad — Lahore, Pakistan</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="/assets/css/styles.css" rel="stylesheet">
 
-    <style>
-        /* Optional: Smooth scrolling for the navigation links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom font for a code feel */
-        .font-code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        }
-
-        /* --- Global Styling --- */
-        :root {
-            --neon-green: #39ff14; /* Electric Green */
-            --dark-bg: #0A0A0A; /* Deep Black */
-            --mid-bg: #1A1A1A;  /* Dark Gray */
-        }
-
-        .text-neon { color: var(--neon-green); }
-        .bg-dark-grid { background-color: var(--dark-bg); }
-
-        /* Neon Glow Utility */
-        .shadow-neon {
-            box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
-        }
-        .text-shadow-neon {
-            text-shadow: 0 0 3px var(--neon-green), 0 0 8px rgba(57, 255, 20, 0.5);
-        }
-        .hover\:shadow-neon-lg:hover {
-             box-shadow: 0 0 10px var(--neon-green), 0 0 25px var(--neon-green);
-        }
-
-        /* Grid Background for Hero Section */
-        .hero-bg-grid {
-            background-color: var(--dark-bg);
-            background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent),
-                             linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-        }
-
-        /* Typing Cursor Style */
-        .typing-cursor {
-            display: inline-block;
-            animation: blink 0.7s infinite;
-            visibility: visible;
-            color: var(--neon-green);
-            text-shadow: 0 0 2px var(--neon-green);
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-
-        /* Glitch/Hacker Text Effect for Main Name */
-        .hacker-text {
-            animation: glitch 1.5s infinite;
-        }
-        @keyframes glitch {
-            0% { transform: translate(0, 0); text-shadow: 2px 0 var(--neon-green), -2px 0 #FF00FF; }
-            25% { transform: translate(-1px, 1px); text-shadow: -1px 0 var(--neon-green), 1px 0 #FF00FF; }
-            50% { transform: translate(1px, -1px); text-shadow: 3px 0 var(--neon-green), -3px 0 #FF00FF; }
-            75% { transform: translate(-1px, 0); text-shadow: -1px 0 var(--neon-green), 1px 0 #FF00FF; }
-            100% { transform: translate(0, 0); text-shadow: 2px 0 var(--neon-green), -2px 0 #FF00FF; }
-        }
-
-        /* --- PRELOADER STYLES --- */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--dark-bg);
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start; /* Align text to the left */
-            padding-left: 10vw;
-            transition: opacity 0.5s ease;
-        }
-
-        .preloader-line {
-            color: var(--neon-green);
-            font-size: 1.1rem;
-            text-shadow: 0 0 2px rgba(57, 255, 20, 0.5);
-            margin-bottom: 5px;
-            opacity: 0; /* Start hidden */
-            animation: bootup 0.1s forwards; /* Use bootup animation */
-        }
-
-        /* Sequential Animation for Bootup Text */
-        @keyframes bootup {
-            to { opacity: 1; }
-        }
-
-        /* Delay the appearance of each line */
-        .preloader-line:nth-child(1) { animation-delay: 0.2s; }
-        .preloader-line:nth-child(2) { animation-delay: 0.4s; }
-        .preloader-line:nth-child(3) { animation-delay: 0.6s; }
-        .preloader-line:nth-child(4) { animation-delay: 0.8s; }
-        .preloader-line:nth-child(5) { animation-delay: 1.2s; }
-        .preloader-line:nth-child(6) { animation-delay: 1.8s; }
-
-        /* NEW: Styling and delay for the final welcome message */
-        .preloader-line:nth-child(7) {
-            animation-delay: 2.2s;
-            font-size: 2.5rem; /* Larger text */
-            margin-top: 1.5rem;
-            color: #fff; /* Make it white or brighter for emphasis */
-            text-shadow: 0 0 5px var(--neon-green), 0 0 15px var(--neon-green);
-        }
-
-
-        /* Loading Dots for the final line */
-        .preloader-dots::after {
-            content: '';
-            animation: dots 2s steps(4, end) infinite;
-        }
-        @keyframes dots {
-            0%, 20% { content: '.'; }
-            40% { content: '..'; }
-            60% { content: '...'; }
-            80%, 100% { content: '....'; }
-        }
-
-        /* Optional: Hide scrollbar during preload */
-        .no-scroll {
-            overflow: hidden;
-        }
-
-        /* New: Utility for initially hidden projects (using display: none) */
-        .project-hidden {
-            display: none;
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://abdulahad381.me/#website",
+                "url": "https://abdulahad381.me/",
+                "name": "Abdul Ahad — Full-Stack Web Development",
+                "description": "Full-stack web development and digital solutions for businesses and startups.",
+                "publisher": { "@id": "https://abdulahad381.me/#organization" }
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://abdulahad381.me/#organization",
+                "name": "Abdul Ahad — Full-Stack Development",
+                "url": "https://abdulahad381.me/",
+                "logo": "https://abdulahad381.me/abc.png",
+                "image": "https://abdulahad381.me/abc.png",
+                "description": "Full-stack web development, APIs, eCommerce and digital solutions from Lahore, Pakistan.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Lahore",
+                    "addressCountry": "PK"
+                },
+                "areaServed": ["Pakistan", "United States", "United Kingdom", "United Arab Emirates", "Canada", "Australia"],
+                "founder": { "@id": "https://abdulahad381.me/#person" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://abdulahad381.me/#person",
+                "name": "Abdul Ahad",
+                "url": "https://abdulahad381.me/",
+                "image": "https://abdulahad381.me/abc.png",
+                "jobTitle": "Full-Stack Web Developer",
+                "worksFor": { "@id": "https://abdulahad381.me/#organization" },
+                "knowsAbout": ["Full-Stack Web Development", "Laravel", "React", "Vue.js", "Nuxt.js", "REST APIs", "MySQL", "eCommerce", "Technical SEO"]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://abdulahad381.me/#webpage",
+                "url": "https://abdulahad381.me/",
+                "name": "Full-Stack Web Development & Digital Solutions",
+                "isPartOf": { "@id": "https://abdulahad381.me/#website" },
+                "about": { "@id": "https://abdulahad381.me/#organization" },
+                "description": "Professional full-stack web development services including websites, web applications, eCommerce, APIs and SEO."
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://abdulahad381.me/#service",
+                "name": "Full-Stack Web Development & Digital Solutions",
+                "url": "https://abdulahad381.me/services/",
+                "provider": { "@id": "https://abdulahad381.me/#organization" },
+                "areaServed": ["Pakistan", "Lahore", "United States", "United Kingdom", "UAE", "Canada", "Australia", "Worldwide"],
+                "serviceType": ["Web Development", "Custom Software", "API Development", "eCommerce Development", "Technical SEO", "Website Maintenance"]
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-dark-grid text-gray-100 font-code no-scroll">
 
@@ -174,511 +99,510 @@
         <p class="preloader-line">NET: Establishing secure connection... [200 OK]</p>
         <p class="preloader-line">FSK: Scanning local data structures... [CLEAN]</p>
         <p class="preloader-line">PORTFOLIO.EXE: Checking dependencies... [COMPLETE]</p>
-
-        <p class="preloader-line">WELCOME TO ABDUL AHAD PORTFOLIO</p>
+        <p class="preloader-line">FULL-STACK DEV SERVICES ONLINE</p>
     </div>
+
     <header class="sticky top-0 z-50 bg-mid-bg shadow-lg border-b border-gray-700">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" aria-label="Main navigation">
+            <a href="/" class="text-xl sm:text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">
                 [root@ahad] $
             </a>
-
-            <div class="hidden md:flex space-x-8">
+            <div class="hidden lg:flex space-x-6 text-sm">
                 <a href="#hero" class="text-gray-400 hover:text-neon transition duration-300">HOME</a>
-                <a href="#skills" class="text-gray-400 hover:text-neon transition duration-300">SKILLS</a>
-                <a href="#projects" class="text-gray-400 hover:text-neon transition duration-300">PROJECTS</a>
-                <a href="#contact" class="text-gray-400 hover:text-neon transition duration-300">CONTACT</a>
+                <a href="#services" class="text-gray-400 hover:text-neon transition duration-300">SERVICES</a>
+                <a href="#technologies" class="text-gray-400 hover:text-neon transition duration-300">STACK</a>
+                <a href="#projects" class="text-gray-400 hover:text-neon transition duration-300">WORK</a>
+                <a href="#about" class="text-gray-400 hover:text-neon transition duration-300">ABOUT</a>
+                <a href="#process" class="text-gray-400 hover:text-neon transition duration-300">PROCESS</a>
+                <a href="/blog/" class="text-gray-400 hover:text-neon transition duration-300">BLOG</a>
+                <a href="#contact" class="text-neon hover:text-green-400 transition duration-300 font-semibold">CONTACT</a>
             </div>
-
-            <button class="md:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button class="lg:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
+        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="#hero" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">HOME</a>
-                <a href="#skills" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">SKILLS</a>
-                <a href="#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">PROJECTS</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon transition duration-300 block px-3 py-2 w-full">CONTACT</a>
+                <a href="#hero" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">HOME</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">SERVICES</a>
+                <a href="#technologies" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">STACK</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">WORK</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">ABOUT</a>
+                <a href="#process" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">PROCESS</a>
+                <a href="/blog/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">BLOG</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-neon block px-3 py-2 w-full">CONTACT</a>
             </div>
         </div>
     </header>
 
     <main>
 
+        <!-- HERO -->
         <section id="hero" class="py-20 md:py-32 hero-bg-grid border-b border-gray-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0" data-aos="fade-right">
-                    <p class="text-lg text-neon font-semibold uppercase tracking-wider">// STATUS: ONLINE</p>
-                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-50 mt-2 font-code hacker-text">
-                        Abdul Ahad
+                <div class="md:w-3/5 text-center md:text-left mb-10 md:mb-0" data-aos="fade-right">
+                    <p class="text-sm text-neon font-semibold uppercase tracking-wider section-label">// STATUS: ONLINE — Lahore, Pakistan</p>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-50 mt-3 font-code">
+                        Full-Stack Web Development &amp; Digital Solutions
                     </h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-400 mt-4 font-light">
-                        > Role: <span id="typing-text" class="font-medium text-neon text-shadow-neon"></span><span class="typing-cursor">█</span>
-                    </h2>
-                    <p class="text-gray-500 mt-6 max-w-lg mx-auto md:mx-0 font-code">
-                        // COMMIT MESSAGE: Focused on elegant, efficient, and scalable web solutions. Let's execute the next mission.
+                    <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl mx-auto md:mx-0">
+                        We build modern websites, scalable web applications, eCommerce platforms, APIs and custom business software for clients in Pakistan and worldwide.
                     </p>
-                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
-                        <a href="#projects" class="px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 transform hover:scale-105 border-2 border-neon">
-                            VIEW WORK (EXECUTE)
+                    <p class="text-sm text-gray-500 mt-3 font-code">
+                        Abdul Ahad — Full-Stack Web Developer
+                        <span id="typing-text" class="text-neon text-shadow-neon"></span><span class="typing-cursor">█</span>
+                    </p>
+                    <p class="text-sm text-gray-400 mt-4 font-code">
+                        React &bull; Nuxt &bull; Vue &bull; Vite &bull; Laravel &bull; PHP &bull; APIs &bull; MySQL
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#contact" class="px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 transform hover:scale-105 border-2 border-neon text-center">
+                            Start a Project
                         </a>
-                        <a href="#contact" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-mid-bg hover:shadow-neon transition duration-300 transform hover:scale-105">
-                            GET IN TOUCH
+                        <a href="#projects" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-mid-bg hover:shadow-neon transition duration-300 transform hover:scale-105 text-center">
+                            View Our Work
                         </a>
                     </div>
                 </div>
-
                 <div class="md:w-1/3" data-aos="fade-left">
-    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-mid-bg border-4 border-neon shadow-neon rounded-full flex items-center justify-center overflow-hidden">
-        <img src="abc.png" alt="Abdul Ahad's Professional Avatar" class="object-cover h-full w-full">
-    </div>
-</div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-16 md:py-24 bg-mid-bg border-b border-gray-700">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-extrabold text-neon text-shadow-neon" data-aos="fade-up">Core Skills: [Loaded]</h2>
-                <p class="mt-4 text-xl text-gray-400 font-code" data-aos="fade-up" data-aos-delay="200">// MODULES.list()</p>
-
-                <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="100">
-                        <div class="text-4xl text-orange-500 mb-3">🛠️</div>
-                        <h3 class="text-lg font-semibold text-gray-50">HTML/CSS</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">Markup.render()</p>
-                    </div>
-
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="200">
-                        <div class="text-4xl text-yellow-400 mb-3">⚡</div>
-                        <h3 class="text-lg font-semibold text-gray-50">JS (ES6+)</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">Logic.execute()</p>
-                    </div>
-
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="300">
-                        <div class="text-4xl text-neon mb-3">⚛️</div>
-                        <h3 class="text-lg font-semibold text-gray-50">React.js</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">UI.Component()</p>
-                    </div>
-
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="400">
-                        <div class="text-4xl text-green-500 mb-3">🟢</div>
-                        <h3 class="text-lg font-semibold text-gray-50">Laravel</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">Server.Init()</p>
-                    </div>
-
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="500">
-                        <div class="text-4xl text-teal-400 mb-3">🎨</div>
-                        <h3 class="text-lg font-semibold text-gray-50">Tailwind</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">Style.Utility()</p>
-                    </div>
-
-                    <div class="p-6 bg-dark-grid border border-gray-700 rounded-xl shadow-lg hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1" data-aos="flip-up" data-aos-delay="600">
-                        <div class="text-4xl text-red-500 mb-3">🗄️</div>
-                        <h3 class="text-lg font-semibold text-gray-50">DB Ops</h3>
-                        <p class="text-sm text-gray-400 mt-1 font-code">Data.Model()</p>
+                    <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-mid-bg border-4 border-neon shadow-neon rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="/abc.png" alt="Abdul Ahad — Full-Stack Web Developer in Lahore, Pakistan" class="object-cover h-full w-full" width="320" height="320" loading="eager">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- SERVICES -->
+        <section id="services" class="py-16 md:py-24 bg-mid-bg border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Services</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Complete digital development — from frontend to deployment</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up">
+                        <h3 class="text-xl font-bold text-neon mb-2">Web Development</h3>
+                        <p class="text-gray-400 text-sm mb-4">Full-stack websites and applications using React, Vue, Nuxt, Laravel, PHP and Vite.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>Full-Stack Web Development</li>
+                            <li>React, Vue.js &amp; Nuxt.js</li>
+                            <li>Laravel &amp; PHP Development</li>
+                        </ul>
+                        <a href="/services/full-stack-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-neon mb-2">Custom Software</h3>
+                        <p class="text-gray-400 text-sm mb-4">Business applications, SaaS platforms, CRM systems and admin dashboards built to your workflow.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>Custom Web Applications</li>
+                            <li>CRM &amp; Admin Dashboards</li>
+                            <li>Workflow Automation</li>
+                        </ul>
+                        <a href="/services/custom-software-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-bold text-neon mb-2">API &amp; Backend</h3>
+                        <p class="text-gray-400 text-sm mb-4">REST APIs, authentication, database design and third-party integrations.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>REST API Development</li>
+                            <li>Payment Gateway Integration</li>
+                            <li>Authentication &amp; JWT</li>
+                        </ul>
+                        <a href="/services/api-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up">
+                        <h3 class="text-xl font-bold text-neon mb-2">eCommerce</h3>
+                        <p class="text-gray-400 text-sm mb-4">Custom online stores and platform integrations with secure payment processing.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>Custom &amp; Laravel eCommerce</li>
+                            <li>Shopify &amp; WooCommerce</li>
+                            <li>Payment Integration</li>
+                        </ul>
+                        <a href="/services/ecommerce-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-neon mb-2">SEO &amp; Digital Growth</h3>
+                        <p class="text-gray-400 text-sm mb-4">Technical SEO, performance optimization and search visibility for business websites.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>Technical &amp; On-Page SEO</li>
+                            <li>Core Web Vitals Optimization</li>
+                            <li>Search Console &amp; Sitemaps</li>
+                        </ul>
+                        <a href="/services/seo.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+
+                    <article class="service-card bg-dark-grid border border-gray-700 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-bold text-neon mb-2">Maintenance</h3>
+                        <p class="text-gray-400 text-sm mb-4">Ongoing support, bug fixes, performance tuning, migrations and deployment.</p>
+                        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                            <li>Bug Fixing &amp; Support</li>
+                            <li>Performance Optimization</li>
+                            <li>Migration &amp; Deployment</li>
+                        </ul>
+                        <a href="/services/website-maintenance.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    </article>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="/services/" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-dark-grid hover:shadow-neon transition duration-300 inline-block">
+                        View All Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGIES -->
+        <section id="technologies" class="py-16 md:py-24 bg-dark-grid border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Technology Stack</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Multi-stack development across modern tools</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div data-aos="fade-up">
+                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Frontend</h3>
+                        <div class="space-y-2">
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">React</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Vue.js</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Nuxt.js</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">JavaScript</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">HTML &amp; CSS</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Vite</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Backend</h3>
+                        <div class="space-y-2">
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Laravel</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">PHP</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Node.js</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">REST APIs</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">MySQL</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Authentication / JWT</span>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Integrations</h3>
+                        <div class="space-y-2">
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">REST API Integration</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Payment Gateways</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">CRM Systems</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Admin Dashboards</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">eCommerce</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Automation</span>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// SEO &amp; Ops</h3>
+                        <div class="space-y-2">
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Technical SEO</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Core Web Vitals</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Search Console</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Deployment</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Hosting Setup</span>
+                            <span class="tech-card inline-block bg-mid-bg border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300 mr-2 mb-2">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section id="why-us" class="py-16 md:py-20 bg-mid-bg border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Why Work With Us</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Practical development focused on business outcomes</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-5" data-aos="fade-up">
+                        <h3 class="text-neon font-bold mb-2">Full-Stack Delivery</h3>
+                        <p class="text-sm text-gray-400">Frontend, backend, database, APIs and deployment handled in one workflow.</p>
+                    </div>
+                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-5" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-neon font-bold mb-2">Multi-Stack Flexibility</h3>
+                        <p class="text-sm text-gray-400">React, Vue, Nuxt, Laravel and PHP — matched to your project requirements.</p>
+                    </div>
+                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-5" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-neon font-bold mb-2">Business-Focused</h3>
+                        <p class="text-sm text-gray-400">Solutions built around real workflows: CRM, dashboards, eCommerce and automation.</p>
+                    </div>
+                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-5" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-neon font-bold mb-2">SEO-Aware Builds</h3>
+                        <p class="text-sm text-gray-400">Clean structure, performance and technical SEO built into every project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-16 md:py-24 bg-dark-grid border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">About Abdul Ahad</h2>
+                        <p class="mt-2 text-gray-400 font-code">// Full-Stack Web Developer / Software Developer</p>
+                        <div class="mt-6 space-y-4 text-gray-400 prose-terminal">
+                            <p>I build complete digital solutions — from user interfaces and APIs to databases, integrations and deployment. Based in Lahore, Pakistan, I work with businesses, startups and organizations locally and internationally.</p>
+                            <p>Projects cover frontend development with React, Vue and Nuxt, backend systems with Laravel and PHP, REST API design, MySQL databases, payment integrations, admin dashboards and eCommerce platforms. Where a project requires additional capacity, delivery can be supported by a development team.</p>
+                            <p>Every build prioritizes clean architecture, maintainable code and performance — with SEO and post-launch maintenance available where needed.</p>
+                        </div>
+                        <a href="#contact" class="inline-block mt-6 px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 border-2 border-neon">
+                            Discuss Your Project
+                        </a>
+                    </div>
+                    <div class="bg-mid-bg border border-gray-700 rounded-xl p-8 font-code text-sm" data-aos="fade-left">
+                        <p class="text-neon mb-4">$ cat profile.json</p>
+                        <pre class="text-gray-400 overflow-x-auto"><code>{
+  "name": "Abdul Ahad",
+  "role": "Full-Stack Web Developer",
+  "location": "Lahore, Pakistan",
+  "serves": ["Pakistan", "USA", "UK", "UAE", "Canada", "Australia", "Remote"],
+  "stack": ["React", "Vue", "Nuxt", "Laravel", "PHP", "MySQL", "REST APIs"],
+  "focus": ["Web Apps", "eCommerce", "APIs", "CRM", "SEO"]
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="py-16 md:py-24 bg-mid-bg border-b border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Development Process</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Structured delivery from discovery to maintenance</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up"><span class="text-neon font-bold">01</span><p class="text-gray-300 mt-1 text-sm font-semibold">Discovery</p><p class="text-gray-500 text-xs mt-1">Goals, scope &amp; requirements</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="50"><span class="text-neon font-bold">02</span><p class="text-gray-300 mt-1 text-sm font-semibold">Planning</p><p class="text-gray-500 text-xs mt-1">Timeline, stack &amp; milestones</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="100"><span class="text-neon font-bold">03</span><p class="text-gray-300 mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-gray-500 text-xs mt-1">Wireframes &amp; system design</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="150"><span class="text-neon font-bold">04</span><p class="text-gray-300 mt-1 text-sm font-semibold">Development</p><p class="text-gray-500 text-xs mt-1">Iterative build &amp; reviews</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="200"><span class="text-neon font-bold">05</span><p class="text-gray-300 mt-1 text-sm font-semibold">Testing</p><p class="text-gray-500 text-xs mt-1">QA, fixes &amp; validation</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="250"><span class="text-neon font-bold">06</span><p class="text-gray-300 mt-1 text-sm font-semibold">Deployment</p><p class="text-gray-500 text-xs mt-1">Launch &amp; hosting setup</p></div>
+                    <div class="process-step bg-dark-grid pl-4 py-4 pr-2" data-aos="fade-up" data-aos-delay="300"><span class="text-neon font-bold">07</span><p class="text-gray-300 mt-1 text-sm font-semibold">Maintenance</p><p class="text-gray-500 text-xs mt-1">Support &amp; growth</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
         <section id="projects" class="py-16 md:py-24 bg-dark-grid border-b border-gray-700">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-extrabold text-neon text-shadow-neon" data-aos="zoom-in-up">Project Log: Latest Missions</h2>
-                <p class="mt-4 text-xl text-gray-400 font-code" data-aos="zoom-in-up" data-aos-delay="200">// FETCHING RESULTS FROM DATABASE...</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="zoom-in-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Selected Work</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Project log — problem, solution, stack</p>
+                </div>
+                <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div id="project-list" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-neon font-bold font-code border-b border-neon">ECOM_PLATFORM v1.2</div>
+                    <article class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-neon font-bold font-code border-b border-neon">ECOM_PLATFORM</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">E-commerce Platform</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// High-throughput shopping cart with secure payment integration (API level 4).</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
-                                <span class="bg-gray-700 text-green-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NODE</span>
-                                <span class="bg-gray-700 text-red-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">MONGO</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">E-commerce Platform</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Business needed a scalable online store with secure checkout and inventory management.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Full-stack shopping platform with payment API integration and admin product management.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Full-stack development</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs px-2 py-0.5 rounded-sm">React</span>
+                                <span class="bg-gray-700 text-green-400 text-xs px-2 py-0.5 rounded-sm">REST API</span>
+                                <span class="bg-gray-700 text-red-400 text-xs px-2 py-0.5 rounded-sm">MySQL</span>
+                                <span class="bg-gray-700 text-yellow-400 text-xs px-2 py-0.5 rounded-sm">Payment Integration</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="300">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-teal-400 font-bold font-code border-b border-teal-400">TASK_MANAGER v3.0</div>
+                    <article class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-teal-400 font-bold font-code border-b border-teal-400">CRM_SUITE</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Task Management App</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Minimalistic task interface with local persistence. Optimized for low-latency updates.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-teal-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">VUE</span>
-                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TAILWIND</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">CRM System</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Client required lead tracking, sales pipeline visibility and support ticketing in one system.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Custom CRM with dashboard, lead management and role-based access control.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Frontend &amp; backend development</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs px-2 py-0.5 rounded-sm">React</span>
+                                <span class="bg-gray-700 text-green-500 text-xs px-2 py-0.5 rounded-sm">Laravel</span>
+                                <span class="bg-gray-700 text-green-600 text-xs px-2 py-0.5 rounded-sm">MySQL</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs px-2 py-0.5 rounded-sm">CRM</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="600">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-yellow-400 font-bold font-code border-b border-yellow-400">API_DOCS v1.0</div>
+                    <article class="project-card bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-green-500 font-bold font-code border-b border-green-500">DOMAIN_PORTAL</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">API Documentation Site</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Auto-generated documentation site. Enabled high-speed client-side searching.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-yellow-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NEXT.JS</span>
-                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REST</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">Domain Registration Portal</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Hosting business needed real-time domain availability checks and purchase workflow.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Laravel portal integrated with third-party registry APIs and payment processing.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Backend &amp; API integration</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-green-500 text-xs px-2 py-0.5 rounded-sm">Laravel</span>
+                                <span class="bg-gray-700 text-cyan-400 text-xs px-2 py-0.5 rounded-sm">REST API</span>
+                                <span class="bg-gray-700 text-red-500 text-xs px-2 py-0.5 rounded-sm">Payments</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-cyan-400 font-bold font-code border-b border-cyan-400">DOMAIN_REG v1.0</div>
+                    <article class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-yellow-400 font-bold font-code border-b border-yellow-400">HR_PORTAL</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Domain Registration Portal</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Integrated with third-party registry APIs for real-time domain checking and purchasing.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-green-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LARAVEL</span>
-                                <span class="bg-gray-700 text-cyan-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">API</span>
-                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">PAYMENTS</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">HR &amp; Employee Portal</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Organization needed secure employee management with payroll and leave requests.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Laravel-based portal with role-based access, payroll module and request workflows.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Full-stack development</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-green-500 text-xs px-2 py-0.5 rounded-sm">Laravel</span>
+                                <span class="bg-gray-700 text-pink-400 text-xs px-2 py-0.5 rounded-sm">Livewire</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs px-2 py-0.5 rounded-sm">Dashboard</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="200">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-orange-400 font-bold font-code border-b border-orange-400">CRM_SUITE v2.5</div>
+                    <article class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-teal-400 font-bold font-code border-b border-teal-400">TASK_MANAGER</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Customer Relationship Mgmt (CRM)</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Full-featured system for lead tracking, sales funnels, and customer support ticketing.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
-                                <span class="bg-gray-700 text-blue-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REDUX</span>
-                                <span class="bg-gray-700 text-green-600 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">SQL</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">Task Management App</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Team needed a lightweight task interface with fast updates and clean UX.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Vue.js application with responsive UI and persistent local state management.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Frontend development</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-teal-400 text-xs px-2 py-0.5 rounded-sm">Vue.js</span>
+                                <span class="bg-gray-700 text-blue-400 text-xs px-2 py-0.5 rounded-sm">Tailwind CSS</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="400">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-purple-400 font-bold font-code border-b border-purple-400">PROJECT_MANAGER v1.1</div>
+                    <article class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-neon-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-40 bg-gray-800 flex items-center justify-center text-purple-400 font-bold font-code border-b border-purple-400">HOSTING_PORTAL</div>
                         <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Agile Project Management Tool</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Kanban board interface with real-time updates, task assignments, and reporting features.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-teal-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">VUE.JS</span>
-                                <span class="bg-gray-700 text-purple-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">FIREBASE</span>
-                                <span class="bg-gray-700 text-red-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">WEBPACK</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
+                            <h3 class="text-xl font-bold text-gray-50">Hosting Client Portal</h3>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Problem:</p>
+                            <p class="text-gray-400 text-sm">Hosting provider needed client billing, package management and status monitoring.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code text-neon">Solution:</p>
+                            <p class="text-gray-400 text-sm">Client-facing portal with billing dashboard and service management interface.</p>
+                            <p class="mt-2 text-gray-500 text-xs font-code">Role: Full-stack development</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="bg-gray-700 text-neon text-xs px-2 py-0.5 rounded-sm">React</span>
+                                <span class="bg-gray-700 text-green-500 text-xs px-2 py-0.5 rounded-sm">REST API</span>
+                                <span class="bg-gray-700 text-lime-400 text-xs px-2 py-0.5 rounded-sm">Dashboard</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="600">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-pink-400 font-bold font-code border-b border-pink-400">HR_PORTAL v3.2</div>
-                        <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">HR & Employee Portal</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Secure employee management system with payroll, time-off requests, and role-based access control.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-green-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LARAVEL</span>
-                                <span class="bg-gray-700 text-pink-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">LIVEWIRE</span>
-                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">BLADE</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="800">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-lime-400 font-bold font-code border-b border-lime-400">HOSTING_SELLER v1.0</div>
-                        <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Hosting Seller/Client Portal</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Client billing, package management, and server status monitoring interface.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-yellow-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">NEXT.JS</span>
-                                <span class="bg-gray-700 text-gray-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TRPC</span>
-                                <span class="bg-gray-700 text-lime-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">PRISMA</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card project-hidden bg-mid-bg rounded-xl shadow-lg overflow-hidden hover:shadow-neon-lg transition duration-300 transform hover:-translate-y-1 border border-gray-700" data-aos="fade-up" data-aos-delay="1000">
-                        <div class="h-48 bg-gray-800 flex items-center justify-center text-purple-400 font-bold font-code border-b border-purple-400">CMS_FRONTEND v4.0</div>
-                        <div class="p-6 text-left">
-                            <h3 class="text-2xl font-bold text-gray-50 font-code">Headless CMS Interface</h3>
-                            <p class="mt-2 text-gray-400 text-sm">// Fully responsive frontend for content management. Utilizes GraphQL for data fetching.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="bg-gray-700 text-neon text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">REACT</span>
-                                <span class="bg-gray-700 text-pink-500 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">GRAPHQL</span>
-                                <span class="bg-gray-700 text-blue-400 text-xs font-medium px-2.5 py-0.5 rounded-sm font-code">TAILWIND</span>
-                            </div>
-                            <div class="mt-5 flex space-x-4">
-                                <a href="#" class="text-neon hover:text-green-400 font-medium transition duration-300 font-code border-b border-neon">LIVE &rarr;</a>
-                                <a href="#" class="text-gray-500 hover:text-gray-300 font-medium transition duration-300 font-code">GITHUB</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    </div>
-
-                <div class="mt-12">
+                    </article>
+                </div>
+                <div class="mt-12 text-center">
                     <button id="loadMoreButton" onclick="loadMoreProjects()" class="px-8 py-3 text-lg font-semibold border-2 border-neon text-neon rounded-sm shadow-neon hover:bg-neon hover:text-gray-900 transition duration-300 font-code">
                         VIEW ALL &gt;&gt;
                     </button>
                 </div>
-
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-mid-bg"
-                data-aos="fade-in">
-                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center" data-aos="fade-up">
-                        <h2
-                            class="text-4xl font-extrabold text-neon text-shadow-neon">SEND_MESSAGE(
-                            )</h2>
-                        <p class="mt-4 text-xl text-gray-400 font-code">//
-                            Initializing secure connection for contact.</p>
-                    </div>
-
-                    <form id="contactForm" class="mt-12 space-y-6">
-                        <div class="field-wrapper">
-                            <input type="text" name="user_name"
-                                id="user_name"
-                                placeholder="> Enter Name..." required
-                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200">
-                        </div>
-
-                        <div class="field-wrapper">
-                            <input type="email" name="user_email"
-                                id="user_email"
-                                placeholder="> Enter Email..." required
-                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200">
-                        </div>
-
-                        <div class="field-wrapper">
-                            <textarea name="message" id="message"
-                                placeholder="> Enter Message..." required
-                                rows="6"
-                                class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition duration-200 resize-none"></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full mt-4 px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 transform hover:scale-[1.01] border-2 border-neon font-code uppercase">
-                            EXECUTE SEND &gt;&gt;
-                        </button>
-
-                        <div id="statusMessage" class="mt-4 text-center font-code text-neon font-medium"></div>
-
-                    </form>
-
-                    <script
-                        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-                    <script>
-                        (function () {
-                            emailjs.init("mbxUJJfUrV8luhFyL"); // 👈 your EmailJS Public key
-                        })();
-
-                        document.getElementById('contactForm').addEventListener('submit', function (event) {
-                            event.preventDefault();
-                            const statusMessage = document.getElementById('statusMessage');
-                            const submitButton = this.querySelector('button[type="submit"]');
-
-                            statusMessage.textContent = 'STATUS: Sending...';
-                            submitButton.disabled = true;
-                            submitButton.textContent = 'Processing...';
-
-                            emailjs.sendForm('service_76bse1v', 'template_lzfq78a', this)
-                                .then(() => {
-                                    statusMessage.textContent = '✅ MESSAGE SENT. AWAITING RESPONSE...';
-
-                                    // Clear form after successful submission
-                                    this.reset();
-
-                                    submitButton.disabled = false;
-                                    submitButton.textContent = 'EXECUTE SEND >>';
-                                }, (error) => {
-                                    console.error('❌ FAILED...', error);
-                                    statusMessage.textContent = '❌ ERROR: FAILED TO SEND. Check console for details.';
-                                    submitButton.disabled = false;
-                                    submitButton.textContent = 'EXECUTE SEND >>';
-                                });
-                        });
-                    </script>
-
+        <!-- CONTACT -->
+        <section id="contact" class="py-16 md:py-24 bg-mid-bg">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-neon text-shadow-neon">Start a Project</h2>
+                    <p class="mt-4 text-lg text-gray-400 font-code">// Project inquiry — response within 1–2 business days</p>
                 </div>
-            </section>
 
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 text-center" data-aos="fade-up">
+                    <a href="mailto:contact@abdulahad381.me" class="text-neon hover:text-green-400 border border-neon px-4 py-2 rounded-lg text-sm transition">contact@abdulahad381.me</a>
+                    <a href="#contactForm" class="text-gray-400 hover:text-neon border border-gray-700 px-4 py-2 rounded-lg text-sm transition">Request a Quote</a>
+                </div>
+
+                <form id="contactForm" class="mt-10 space-y-5" data-aos="fade-up">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <input type="text" name="user_name" id="user_name" placeholder="> Name *" required class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition">
+                        <input type="email" name="user_email" id="user_email" placeholder="> Email *" required class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon focus:ring-1 focus:ring-neon outline-none transition">
+                    </div>
+                    <input type="text" name="company" id="company" placeholder="> Company / Business" class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon outline-none transition">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <select name="project_type" id="project_type" class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon outline-none transition">
+                            <option value="">Project Type</option>
+                            <option value="Website">Website</option>
+                            <option value="Web Application">Web Application</option>
+                            <option value="eCommerce">eCommerce</option>
+                            <option value="API / Backend">API / Backend</option>
+                            <option value="CRM / Dashboard">CRM / Dashboard</option>
+                            <option value="SEO / Optimization">SEO / Optimization</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <select name="budget" id="budget" class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon outline-none transition">
+                            <option value="">Budget Range</option>
+                            <option value="Under $500">Under $500</option>
+                            <option value="$500 – $1,500">$500 – $1,500</option>
+                            <option value="$1,500 – $5,000">$1,500 – $5,000</option>
+                            <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+                            <option value="$15,000+">$15,000+</option>
+                            <option value="Not sure">Not sure yet</option>
+                        </select>
+                    </div>
+                    <select name="services_needed" id="services_needed" class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon outline-none transition">
+                        <option value="">Required Services</option>
+                        <option value="Full-Stack Development">Full-Stack Development</option>
+                        <option value="Frontend (React/Vue/Nuxt)">Frontend (React/Vue/Nuxt)</option>
+                        <option value="Laravel / PHP Backend">Laravel / PHP Backend</option>
+                        <option value="API Development">API Development</option>
+                        <option value="eCommerce">eCommerce</option>
+                        <option value="SEO">SEO</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                    <textarea name="message" id="message" placeholder="> Project description *" required rows="5" class="w-full bg-dark-grid border-2 border-gray-700 text-gray-100 p-3 font-code focus:border-neon outline-none transition resize-none"></textarea>
+                    <button type="submit" class="w-full px-6 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 border-2 border-neon font-code uppercase">
+                        Submit Inquiry &gt;&gt;
+                    </button>
+                    <p id="statusMessage" class="text-center font-code text-neon font-medium" role="status"></p>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-dark-grid border-t-2 border-neon shadow-neon">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center font-code">
-            <p class="text-neon text-sm">> LOG: Footer initialized. Status: OK. Time: 2025</p>
-            <div class="mt-4 flex justify-center space-x-6" data-aos="fade-up">
-                <a href="#" class="text-gray-500 hover:text-neon transition duration-300">[linkedin]</a>
-                <a href="#" class="text-gray-500 hover:text-neon transition duration-300">[github]</a>
-                <a href="mailto:youremail@example.com" class="text-gray-500 hover:text-neon transition duration-300">[email]</a>
+        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 font-code">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                <div>
+                    <p class="text-neon font-bold mb-2">[root@ahad] $</p>
+                    <p class="text-gray-400">Full-stack web development &amp; digital solutions from Lahore, Pakistan — serving clients worldwide.</p>
+                </div>
+                <div>
+                    <p class="text-neon font-bold mb-2">Services</p>
+                    <ul class="text-gray-500 space-y-1">
+                        <li><a href="/services/full-stack-development.html" class="hover:text-neon">Full-Stack Development</a></li>
+                        <li><a href="/services/laravel-development.html" class="hover:text-neon">Laravel Development</a></li>
+                        <li><a href="/services/react-development.html" class="hover:text-neon">React Development</a></li>
+                        <li><a href="/services/ecommerce-development.html" class="hover:text-neon">eCommerce</a></li>
+                        <li><a href="/services/seo.html" class="hover:text-neon">SEO Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-neon font-bold mb-2">Connect</p>
+                    <ul class="text-gray-500 space-y-1">
+                        <li><a href="mailto:contact@abdulahad381.me" class="hover:text-neon">contact@abdulahad381.me</a></li>
+                        <li><a href="#contact" class="hover:text-neon">Start a Project</a></li>
+                        <li><a href="/blog/" class="hover:text-neon">Blog</a></li>
+                    </ul>
+                </div>
             </div>
+            <p class="text-gray-600 text-xs text-center mt-8">&copy; 2026 Abdul Ahad. Full-Stack Web Development &amp; Digital Solutions.</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            disable: 'mobile'
-        });
-    </script>
-
-    <script>
-        // --- Preloader & Typing Animation Scripts (Original) ---
-
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            const body = document.body;
-
-            // Wait for 3.5 seconds (longer than the animation sequence) before fading out.
-            const totalLoadTime = 3500;
-
-            setTimeout(function() {
-                // Fades out the preloader
-                preloader.style.opacity = '0';
-
-                // Wait for the fade-out transition, then remove it
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                    body.classList.remove('no-scroll'); // Re-enable scrolling
-
-                    // Start the typing animation once the page is fully loaded and visible
-                    initTypingAnimation();
-                }, 500); // Matches the CSS transition duration
-            }, totalLoadTime);
-        });
-
-        // Function to initialize the typing animation
-        function initTypingAnimation() {
-            const typingTextElement = document.getElementById('typing-text');
-            const words = ["Full-Stack Developer", "Software Engineer", "Systems Architect", "React Specialist"];
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-
-            function type() {
-                const currentWord = words[wordIndex];
-
-                if (isDeleting) {
-                    typingTextElement.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typingTextElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                let typeSpeed = isDeleting ? 75 : 150;
-
-                if (!isDeleting && charIndex === currentWord.length) {
-                    typeSpeed = 1500;
-                    isDeleting = true;
-                }
-                else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    typeSpeed = 500;
-                }
-
-                setTimeout(type, typeSpeed);
-            }
-
-            // Start the typing sequence
-            type();
-        }
-
-
-        // --- Corrected Projects 'Load More' Script ---
-
-        let allProjectsLoaded = false;
-
-        function loadMoreProjects() {
-            // Select all project cards starting from the 4th element (the ones we want to hide/show)
-            const allExtraProjects = document.querySelectorAll('.project-card:nth-child(n+4)');
-            const loadMoreButton = document.getElementById('loadMoreButton');
-
-            if (!allProjectsLoaded) {
-                // ACTION: SHOW PROJECTS
-
-                // 1. Reveal all hidden projects
-                allExtraProjects.forEach((project) => {
-                    // Remove the class that hides them
-                    project.classList.remove('project-hidden');
-                });
-
-                // Re-run AOS.refresh() once after showing all to apply animations
-                AOS.refresh();
-
-                // 2. Update button to "HIDE" mode
-                loadMoreButton.textContent = '<< HIDE PROJECTS';
-                // Remove green neon styles
-                loadMoreButton.classList.remove('text-neon', 'border-neon', 'hover:bg-neon', 'hover:text-gray-900', 'shadow-neon');
-                // Add muted gray styles
-                loadMoreButton.classList.add('bg-gray-700', 'text-gray-400', 'border-gray-700', 'hover:bg-gray-700/80', 'shadow-lg');
-
-                allProjectsLoaded = true;
-
-            } else {
-                // ACTION: HIDE PROJECTS
-
-                // 1. Hide the extra projects
-                allExtraProjects.forEach(project => {
-                    project.classList.add('project-hidden');
-                });
-
-                // 2. Update button back to "VIEW ALL" mode
-                loadMoreButton.textContent = 'VIEW ALL >>';
-                // Remove muted gray styles
-                loadMoreButton.classList.remove('bg-gray-700', 'text-gray-400', 'border-gray-700', 'hover:bg-gray-700/80', 'shadow-lg');
-                // Add green neon styles
-                loadMoreButton.classList.add('text-neon', 'border-neon', 'hover:bg-neon', 'hover:text-gray-900', 'shadow-neon');
-
-                allProjectsLoaded = false;
-
-                // 3. Scroll back to the top of the project section (optional but nice UX)
-                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // --- NEW: Mobile Menu Toggle Function ---
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            // The 'hidden' Tailwind class maps to 'display: none'.
-            // The toggle checks if the class is present and removes/adds it.
-            mobileMenu.classList.toggle('hidden');
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
