@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Full-stack web development services from Lahore, Pakistan. React, Laravel, Nuxt, APIs, eCommerce, SEO and maintenance for businesses worldwide.">
+    <meta name="description" content="AHADIX offers website development, custom web apps, eCommerce, SEO, automation and maintenance for businesses worldwide. Digital solutions agency founded by Abdul Ahad.">
     <meta name="keywords" content="full stack developer Pakistan, web development Lahore, Laravel developer Pakistan, React developer Pakistan, API development Pakistan">
     <meta name="author" content="Abdul Ahad">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Web Development Services | Full-Stack Developer Pakistan">
-    <meta property="og:description" content="Full-stack web development services from Lahore, Pakistan. React, Laravel, Nuxt, APIs, eCommerce, SEO and maintenance for businesses worldwide.">
+    <meta property="og:title" content="Web Development Services for Businesses | AHADIX">
+    <meta property="og:description" content="AHADIX offers website development, custom web apps, eCommerce, SEO and maintenance for businesses worldwide. Founded by Abdul Ahad.">
     <meta property="og:image" content="https://abdulahad381.me/abc.png">
     <meta property="og:url" content="https://abdulahad381.me/services/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Abdul Ahad — Full-Stack Development">
+    <meta property="og:site_name" content="AHADIX">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Web Development Services | Full-Stack Developer Pakistan">
-    <meta name="twitter:description" content="Full-stack web development services from Lahore, Pakistan. React, Laravel, Nuxt, APIs, eCommerce, SEO and maintenance.">
+    <meta name="twitter:title" content="Web Development Services for Businesses | AHADIX">
+    <meta name="twitter:description" content="AHADIX offers website development, custom web apps, eCommerce, SEO and maintenance for businesses worldwide. Founded by Abdul Ahad.">
     <meta name="twitter:image" content="https://abdulahad381.me/abc.png">
 
     <link rel="canonical" href="https://abdulahad381.me/services/">
     <link rel="icon" type="image/png" href="/abc.png">
 
-    <title>Web Development Services | Full-Stack Developer Pakistan</title>
+    <title>Web Development Services for Businesses | AHADIX</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0c1b2a',
+                        muted: '#5b6b7c',
+                        accent: '#0f6e6e',
+                        soft: '#e8eef2',
+                        page: '#f4f6f8'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', 'sans-serif'],
+                        display: ['Sora', 'Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
 
@@ -73,260 +92,268 @@
     }
     </script>
 </head>
-<body class="bg-dark-grid text-gray-100 font-code">
+<body class="bg-page text-ink font-sans">
 
-    <header class="sticky top-0 z-50 bg-mid-bg shadow-lg border-b border-gray-700">
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" aria-label="Main navigation">
-            <a href="/" class="text-xl sm:text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">
-                [root@ahad] $
-            </a>
-            <div class="hidden lg:flex space-x-6 text-sm">
-                <a href="/" class="text-gray-400 hover:text-neon transition duration-300">HOME</a>
-                <a href="/services/" class="text-neon hover:text-green-400 transition duration-300 font-semibold">SERVICES</a>
-                <a href="/#projects" class="text-gray-400 hover:text-neon transition duration-300">WORK</a>
-                <a href="/#contact" class="text-gray-400 hover:text-neon transition duration-300">CONTACT</a>
+            <a href="/" class="brand-mark">AHAD<span>IX</span></a>
+            <div class="hidden lg:flex items-center gap-7">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/services/" class="nav-link">Services</a>
+                <a href="/#projects" class="nav-link">Work</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="/#contact" class="btn-primary !py-2 !px-4 text-sm">Contact</a>
             </div>
-            <button class="lg:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <button class="lg:hidden text-ink focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">HOME</a>
-                <a href="/services/" onclick="toggleMobileMenu()" class="text-neon block px-3 py-2 w-full">SERVICES</a>
-                <a href="/#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">WORK</a>
-                <a href="/#contact" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">CONTACT</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-white border-t border-slate-200 shadow-lg">
+            <div class="px-4 py-3 flex flex-col gap-1">
+                <a href="/" onclick="toggleMobileMenu()" class="nav-link py-2">Home</a>
+                <a href="/services/" onclick="toggleMobileMenu()" class="nav-link py-2">Services</a>
+                <a href="/#projects" onclick="toggleMobileMenu()" class="nav-link py-2">Work</a>
+                <a href="/#about" onclick="toggleMobileMenu()" class="nav-link py-2">About</a>
+                <a href="/blog/" onclick="toggleMobileMenu()" class="nav-link py-2">Blog</a>
+                <a href="/#contact" onclick="toggleMobileMenu()" class="btn-primary mt-2 text-center">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="py-12 md:py-16 hero-bg-grid border-b border-gray-700">
+        <section class="service-hero py-12 md:py-16 border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="breadcrumb text-sm text-gray-500 mb-6 font-code" aria-label="Breadcrumb">
-                    <a href="/" class="hover:text-neon">Home</a>
+                <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-accent">Home</a>
                     <span class="mx-2 text-gray-600">/</span>
-                    <span class="text-neon">Services</span>
+                    <span class="text-accent font-semibold">Services</span>
                 </nav>
-                <p class="text-sm text-neon font-semibold uppercase tracking-wider section-label">// SERVICE_CATALOG — Lahore, Pakistan</p>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-50 mt-3">Web Development Services</h1>
-                <p class="text-lg text-gray-300 mt-4 max-w-3xl">
-                    Abdul Ahad provides full-stack web development from Lahore, Pakistan — serving clients locally and worldwide. From React frontends and Laravel backends to REST APIs, eCommerce platforms, technical SEO and ongoing maintenance, each service is scoped to your project requirements.
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Digital Solutions · Worldwide</p>
+                <h1 class="service-page-title mt-3">Our Services</h1>
+                <p class="service-page-lead mt-4">
+                    AHADIX delivers websites, web applications, eCommerce, SEO, automation and ongoing support for businesses worldwide. Each service is scoped to your goals and growth targets.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Problems We Solve</h2>
+                <h2 class="service-section-title">Problems We Solve</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Outdated or broken websites</h3>
-                        <p class="text-sm text-gray-400">Slow, non-responsive sites that fail on mobile, load poorly, or no longer reflect your business. We rebuild or refactor with modern stacks and performance in mind.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Outdated or broken websites</h3>
+                        <p class="text-sm text-muted">Slow, non-responsive sites that fail on mobile, load poorly, or no longer reflect your business. We rebuild or refactor with modern stacks and performance in mind.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">No internal tooling</h3>
-                        <p class="text-sm text-gray-400">Teams running operations on spreadsheets or disconnected tools. We build CRMs, dashboards and workflow apps tailored to how your business actually works.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">No internal tooling</h3>
+                        <p class="text-sm text-muted">Teams running operations on spreadsheets or disconnected tools. We build CRMs, dashboards and workflow apps tailored to how your business actually works.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Fragmented frontend and backend</h3>
-                        <p class="text-sm text-gray-400">Separate contractors for UI and API with integration gaps. As a full stack developer in Pakistan, delivery covers both layers in one coherent build.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Fragmented frontend and backend</h3>
+                        <p class="text-sm text-muted">Separate contractors for UI and API with integration gaps. As a full stack developer in Pakistan, delivery covers both layers in one coherent build.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Poor search visibility</h3>
-                        <p class="text-sm text-gray-400">Sites that don't rank because of technical issues — slow pages, missing metadata, broken structure. Technical SEO is integrated into builds and available as a standalone service.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Poor search visibility</h3>
+                        <p class="text-sm text-muted">Sites that don't rank because of technical issues — slow pages, missing metadata, broken structure. Technical SEO is integrated into builds and available as a standalone service.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">What's Included</h2>
-                <p class="text-gray-400 mb-8 max-w-2xl">Each service area below covers scoping, development, testing and handoff. Select a service for detailed deliverables.</p>
+                <h2 class="service-section-title !mb-4">What's Included</h2>
+                <p class="text-muted mb-8 max-w-2xl">Each service area below covers scoping, development, testing and handoff. Select a service for detailed deliverables.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Full-Stack Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">End-to-end web applications — frontend, backend, database and deployment.</p>
-                        <a href="/services/full-stack-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Full-Stack Development</h3>
+                        <p class="text-muted text-sm mb-4">End-to-end web applications — frontend, backend, database and deployment.</p>
+                        <a href="/services/full-stack-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">React Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">Single-page apps, dashboards and interactive UIs with React and modern tooling.</p>
-                        <a href="/services/react-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">React Development</h3>
+                        <p class="text-muted text-sm mb-4">Single-page apps, dashboards and interactive UIs with React and modern tooling.</p>
+                        <a href="/services/react-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Nuxt Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">Vue-based SSR and static sites with Nuxt for SEO-friendly, fast-loading pages.</p>
-                        <a href="/services/nuxt-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Nuxt Development</h3>
+                        <p class="text-muted text-sm mb-4">Vue-based SSR and static sites with Nuxt for SEO-friendly, fast-loading pages.</p>
+                        <a href="/services/nuxt-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Laravel Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">PHP backend systems, admin panels, APIs and business logic with Laravel.</p>
-                        <a href="/services/laravel-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Laravel Development</h3>
+                        <p class="text-muted text-sm mb-4">PHP backend systems, admin panels, APIs and business logic with Laravel.</p>
+                        <a href="/services/laravel-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">API Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">REST APIs, authentication, third-party integrations and database design.</p>
-                        <a href="/services/api-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">API Development</h3>
+                        <p class="text-muted text-sm mb-4">REST APIs, authentication, third-party integrations and database design.</p>
+                        <a href="/services/api-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Custom Software</h3>
-                        <p class="text-gray-400 text-sm mb-4">CRMs, SaaS platforms, internal tools and admin dashboards built to spec.</p>
-                        <a href="/services/custom-software-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Custom Software</h3>
+                        <p class="text-muted text-sm mb-4">CRMs, SaaS platforms, internal tools and admin dashboards built to spec.</p>
+                        <a href="/services/custom-software-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">eCommerce Development</h3>
-                        <p class="text-gray-400 text-sm mb-4">Custom online stores, checkout flows and payment gateway integration.</p>
-                        <a href="/services/ecommerce-development.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">eCommerce Development</h3>
+                        <p class="text-muted text-sm mb-4">Custom online stores, checkout flows and payment gateway integration.</p>
+                        <a href="/services/ecommerce-development.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Technical SEO</h3>
-                        <p class="text-gray-400 text-sm mb-4">Core Web Vitals, crawlability, structured data and on-page optimization.</p>
-                        <a href="/services/seo.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Technical SEO</h3>
+                        <p class="text-muted text-sm mb-4">Core Web Vitals, crawlability, structured data and on-page optimization.</p>
+                        <a href="/services/seo.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
-                    <article class="service-card bg-mid-bg border border-gray-700 rounded-xl p-6 transition duration-300">
-                        <h3 class="text-lg font-bold text-neon mb-2">Website Maintenance</h3>
-                        <p class="text-gray-400 text-sm mb-4">Bug fixes, updates, performance tuning, migrations and ongoing support.</p>
-                        <a href="/services/website-maintenance.html" class="text-neon text-sm border-b border-neon hover:text-green-400">Learn more &rarr;</a>
+                    <article class="service-card p-6">
+                        <h3 class="text-xl font-bold text-ink mb-2 font-display">Website Maintenance</h3>
+                        <p class="text-muted text-sm mb-4">Bug fixes, updates, performance tuning, migrations and ongoing support.</p>
+                        <a href="/services/website-maintenance.html" class="text-accent text-sm font-semibold hover:underline">Learn more &rarr;</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Technologies</h2>
+                <h2 class="service-section-title">Technologies</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
-                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Frontend</h3>
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider mb-4">Frontend</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">React</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Vue.js</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Nuxt.js</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Tailwind CSS</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Vite</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">React</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Vue.js</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Nuxt.js</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Tailwind CSS</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Vite</span>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Backend</h3>
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider mb-4">Backend</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Laravel</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">PHP</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">REST APIs</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">MySQL</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">JWT Auth</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Laravel</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">PHP</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">REST APIs</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">MySQL</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">JWT Auth</span>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// Integrations</h3>
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider mb-4">Integrations</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Payment Gateways</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Shopify</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">WooCommerce</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">CRM Systems</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Payment Gateways</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Shopify</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">WooCommerce</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">CRM Systems</span>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-gray-200 mb-4 font-code">// SEO &amp; Ops</h3>
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider mb-4">SEO &amp; Ops</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Technical SEO</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Core Web Vitals</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">Search Console</span>
-                            <span class="tech-card bg-dark-grid border border-gray-700 rounded px-3 py-1.5 text-sm text-gray-300">GitHub Pages</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Technical SEO</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Core Web Vitals</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Search Console</span>
+                            <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">GitHub Pages</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Development Process</h2>
+                <h2 class="service-section-title">Development Process</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">01</span><p class="text-gray-300 mt-1 text-sm font-semibold">Discovery</p><p class="text-gray-500 text-xs mt-1">Goals, scope and requirements gathering</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">02</span><p class="text-gray-300 mt-1 text-sm font-semibold">Planning</p><p class="text-gray-500 text-xs mt-1">Timeline, stack selection and milestones</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">03</span><p class="text-gray-300 mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-gray-500 text-xs mt-1">Wireframes and system design</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">04</span><p class="text-gray-300 mt-1 text-sm font-semibold">Development</p><p class="text-gray-500 text-xs mt-1">Iterative build with review checkpoints</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">05</span><p class="text-gray-300 mt-1 text-sm font-semibold">Testing</p><p class="text-gray-500 text-xs mt-1">QA, bug fixes and validation</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">06</span><p class="text-gray-300 mt-1 text-sm font-semibold">Deployment</p><p class="text-gray-500 text-xs mt-1">Launch, hosting and DNS setup</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">07</span><p class="text-gray-300 mt-1 text-sm font-semibold">Maintenance</p><p class="text-gray-500 text-xs mt-1">Ongoing support and improvements</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">01</span><p class="text-ink mt-1 text-sm font-semibold">Discovery</p><p class="text-slate-500 text-xs mt-1">Goals, scope and requirements gathering</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">02</span><p class="text-ink mt-1 text-sm font-semibold">Planning</p><p class="text-slate-500 text-xs mt-1">Timeline, stack selection and milestones</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">03</span><p class="text-ink mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-slate-500 text-xs mt-1">Wireframes and system design</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">04</span><p class="text-ink mt-1 text-sm font-semibold">Development</p><p class="text-slate-500 text-xs mt-1">Iterative build with review checkpoints</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">05</span><p class="text-ink mt-1 text-sm font-semibold">Testing</p><p class="text-slate-500 text-xs mt-1">QA, bug fixes and validation</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">06</span><p class="text-ink mt-1 text-sm font-semibold">Deployment</p><p class="text-slate-500 text-xs mt-1">Launch, hosting and DNS setup</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">07</span><p class="text-ink mt-1 text-sm font-semibold">Maintenance</p><p class="text-slate-500 text-xs mt-1">Ongoing support and improvements</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Related Work</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto mb-8">Projects include eCommerce platforms, CRM systems, domain registration portals, HR portals and hosting client dashboards — built with React, Laravel, Vue and REST APIs.</p>
-                <a href="/#projects" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-dark-grid hover:shadow-neon transition duration-300 inline-block">
-                    View Portfolio Projects &rarr;
+                <h2 class="service-section-title !mb-4">Related Work</h2>
+                <p class="text-muted max-w-2xl mx-auto mb-8">Projects include eCommerce platforms, CRM systems, domain registration portals, HR portals and hosting client dashboards — built with React, Laravel, Vue and REST APIs.</p>
+                <a href="/#projects" class="btn-secondary inline-flex">
+                    View Portfolio Projects →
                 </a>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">FAQ</h2>
+                <h2 class="service-section-title">FAQ</h2>
                 <div class="space-y-4">
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Do you work with clients outside Pakistan?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Yes. Based in Lahore, Pakistan, I work with clients across the US, UK, UAE, Canada, Australia and other regions. Communication is handled via email and video calls in your timezone where possible.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Do you work with clients outside Pakistan?</summary>
+                        <p class="text-muted text-sm mt-3">Yes. Based in Lahore, Pakistan, I work with clients across the US, UK, UAE, Canada, Australia and other regions. Communication is handled via email and video calls in your timezone where possible.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">How do you choose the tech stack for a project?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Stack selection depends on project requirements — existing systems, team familiarity, performance needs and SEO goals. React or Nuxt for interactive frontends, Laravel for robust PHP backends, and REST APIs when decoupling frontend from backend makes sense.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">How do you choose the tech stack for a project?</summary>
+                        <p class="text-muted text-sm mt-3">Stack selection depends on project requirements — existing systems, team familiarity, performance needs and SEO goals. React or Nuxt for interactive frontends, Laravel for robust PHP backends, and REST APIs when decoupling frontend from backend makes sense.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Can you take over an existing codebase?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Yes. Maintenance and feature work on existing Laravel, React or PHP projects is available. I review the codebase first to assess structure, dependencies and scope before quoting.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Can you take over an existing codebase?</summary>
+                        <p class="text-muted text-sm mt-3">Yes. Maintenance and feature work on existing Laravel, React or PHP projects is available. I review the codebase first to assess structure, dependencies and scope before quoting.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">What information do you need to start?</summary>
-                        <p class="text-gray-400 text-sm mt-3">A brief description of what you need built, any reference sites or wireframes, your timeline and budget range. From there we schedule a discovery call to define scope and deliverables.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">What information do you need to start?</summary>
+                        <p class="text-muted text-sm mt-3">A brief description of what you need built, any reference sites or wireframes, your timeline and budget range. From there we schedule a discovery call to define scope and deliverables.</p>
                     </details>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-20 bg-mid-bg">
+        <section class="section-pad service-cta-band">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Start a Project</h2>
-                <p class="text-gray-400 mb-8">Describe your project and we'll respond within 1–2 business days with next steps and a scoped proposal.</p>
-                <a href="/#contact" class="px-8 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 border-2 border-neon inline-block">
-                    Get in Touch &gt;&gt;
+                <h2 class="service-section-title !mb-4">Start a Project</h2>
+                <p class="text-muted mb-8">Describe your project and we'll respond within 1–2 business days with next steps and a scoped proposal.</p>
+                <a href="/#contact" class="btn-primary btn-shine inline-flex">
+                    Get in Touch
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark-grid border-t-2 border-neon shadow-neon">
-        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 font-code">
+    <button id="back-to-top" type="button" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <footer class="site-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                 <div>
-                    <p class="text-neon font-bold mb-2">[root@ahad] $</p>
-                    <p class="text-gray-400">Full-stack web development &amp; digital solutions from Lahore, Pakistan — serving clients worldwide.</p>
+                    <p class="footer-brand mb-2">AHADIX</p>
+                    <p>Digital solutions agency founded by Abdul Ahad. Websites, web apps, SEO, automation and digital growth for clients worldwide.</p>
                 </div>
                 <div>
-                    <p class="text-neon font-bold mb-2">Services</p>
-                    <ul class="text-gray-500 space-y-1">
-                        <li><a href="/services/full-stack-development.html" class="hover:text-neon">Full-Stack Development</a></li>
-                        <li><a href="/services/laravel-development.html" class="hover:text-neon">Laravel Development</a></li>
-                        <li><a href="/services/react-development.html" class="hover:text-neon">React Development</a></li>
-                        <li><a href="/services/ecommerce-development.html" class="hover:text-neon">eCommerce</a></li>
-                        <li><a href="/services/seo.html" class="hover:text-neon">SEO Services</a></li>
+                    <p class="text-white font-semibold mb-2">Services</p>
+                    <ul class="space-y-1">
+                        <li><a href="/services/full-stack-development.html">Web Applications</a></li>
+                        <li><a href="/services/custom-software-development.html">Custom Software</a></li>
+                        <li><a href="/services/ecommerce-development.html">eCommerce</a></li>
+                        <li><a href="/services/seo.html">SEO &amp; Growth</a></li>
+                        <li><a href="/services/website-maintenance.html">Maintenance</a></li>
                     </ul>
                 </div>
                 <div>
-                    <p class="text-neon font-bold mb-2">Connect</p>
-                    <ul class="text-gray-500 space-y-1">
-                        <li><a href="mailto:contact@abdulahad381.me" class="hover:text-neon">contact@abdulahad381.me</a></li>
-                        <li><a href="/#contact" class="hover:text-neon">Start a Project</a></li>
-                        <li><a href="/blog/" class="hover:text-neon">Blog</a></li>
+                    <p class="text-white font-semibold mb-2">Connect</p>
+                    <ul class="space-y-1">
+                        <li><a href="mailto:contact@abdulahad381.me">contact@abdulahad381.me</a></li>
+                        <li><a href="/#contact">Start a Project</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="text-gray-600 text-xs text-center mt-8">&copy; 2026 Abdul Ahad. Full-Stack Web Development &amp; Digital Solutions.</p>
+            <p class="text-white/40 text-xs text-center mt-10">&copy; 2026 AHADIX. Founded by Abdul Ahad.</p>
         </div>
     </footer>
 

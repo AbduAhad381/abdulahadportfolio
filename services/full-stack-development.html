@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Full-stack web development from Lahore, Pakistan. React, Laravel, MySQL and REST APIs built end-to-end for businesses and startups worldwide.">
+    <meta name="description" content="End-to-end web application development for businesses — frontend, backend, database and deployment. Delivered by AHADIX.">
     <meta name="keywords" content="full stack developer Pakistan, full stack web development Lahore, Laravel React developer, web application development Pakistan">
     <meta name="author" content="Abdul Ahad">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Full-Stack Web Development Services | Abdul Ahad Lahore">
-    <meta property="og:description" content="Full-stack web development from Lahore, Pakistan. React, Laravel, MySQL and REST APIs built end-to-end for businesses and startups worldwide.">
+    <meta property="og:title" content="Custom Web Application Development | AHADIX">
+    <meta property="og:description" content="End-to-end web application development for businesses — frontend, backend, database and deployment. Delivered by AHADIX.">
     <meta property="og:image" content="https://abdulahad381.me/abc.png">
     <meta property="og:url" content="https://abdulahad381.me/services/full-stack-development.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Abdul Ahad — Full-Stack Development">
+    <meta property="og:site_name" content="AHADIX">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Full-Stack Web Development Services | Abdul Ahad Lahore">
-    <meta name="twitter:description" content="Full-stack web development from Lahore, Pakistan. React, Laravel, MySQL and REST APIs for businesses worldwide.">
+    <meta name="twitter:title" content="Custom Web Application Development | AHADIX">
+    <meta name="twitter:description" content="End-to-end web application development for businesses — frontend, backend, database and deployment. Delivered by AHADIX.">
     <meta name="twitter:image" content="https://abdulahad381.me/abc.png">
 
     <link rel="canonical" href="https://abdulahad381.me/services/full-stack-development.html">
     <link rel="icon" type="image/png" href="/abc.png">
 
-    <title>Full-Stack Web Development Services | Abdul Ahad Lahore</title>
+    <title>Custom Web Application Development | AHADIX</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0c1b2a',
+                        muted: '#5b6b7c',
+                        accent: '#0f6e6e',
+                        soft: '#e8eef2',
+                        page: '#f4f6f8'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', 'sans-serif'],
+                        display: ['Sora', 'Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
 
     <script type="application/ld+json">
@@ -69,181 +89,201 @@
     }
     </script>
 </head>
-<body class="bg-dark-grid text-gray-100 font-code">
+<body class="bg-page text-ink font-sans">
 
-    <header class="sticky top-0 z-50 bg-mid-bg shadow-lg border-b border-gray-700">
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" aria-label="Main navigation">
-            <a href="/" class="text-xl sm:text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">[root@ahad] $</a>
-            <div class="hidden lg:flex space-x-6 text-sm">
-                <a href="/" class="text-gray-400 hover:text-neon transition duration-300">HOME</a>
-                <a href="/services/" class="text-gray-400 hover:text-neon transition duration-300">SERVICES</a>
-                <a href="/#projects" class="text-gray-400 hover:text-neon transition duration-300">WORK</a>
-                <a href="/#contact" class="text-neon hover:text-green-400 transition duration-300 font-semibold">CONTACT</a>
+            <a href="/" class="brand-mark">AHAD<span>IX</span></a>
+            <div class="hidden lg:flex items-center gap-7">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/services/" class="nav-link">Services</a>
+                <a href="/#projects" class="nav-link">Work</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="/#contact" class="btn-primary !py-2 !px-4 text-sm">Contact</a>
             </div>
-            <button class="lg:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <button class="lg:hidden text-ink focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">HOME</a>
-                <a href="/services/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">SERVICES</a>
-                <a href="/#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">WORK</a>
-                <a href="/#contact" onclick="toggleMobileMenu()" class="text-neon block px-3 py-2 w-full">CONTACT</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-white border-t border-slate-200 shadow-lg">
+            <div class="px-4 py-3 flex flex-col gap-1">
+                <a href="/" onclick="toggleMobileMenu()" class="nav-link py-2">Home</a>
+                <a href="/services/" onclick="toggleMobileMenu()" class="nav-link py-2">Services</a>
+                <a href="/#projects" onclick="toggleMobileMenu()" class="nav-link py-2">Work</a>
+                <a href="/#about" onclick="toggleMobileMenu()" class="nav-link py-2">About</a>
+                <a href="/blog/" onclick="toggleMobileMenu()" class="nav-link py-2">Blog</a>
+                <a href="/#contact" onclick="toggleMobileMenu()" class="btn-primary mt-2 text-center">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="py-12 md:py-16 hero-bg-grid border-b border-gray-700">
+        <section class="service-hero py-12 md:py-16 border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="breadcrumb text-sm text-gray-500 mb-6 font-code" aria-label="Breadcrumb">
-                    <a href="/" class="hover:text-neon">Home</a><span class="mx-2 text-gray-600">/</span>
-                    <a href="/services/" class="hover:text-neon">Services</a><span class="mx-2 text-gray-600">/</span>
-                    <span class="text-neon">Full-Stack Development</span>
+                <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-accent">Home</a><span class="mx-2 text-gray-600">/</span>
+                    <a href="/services/" class="hover:text-accent">Services</a><span class="mx-2 text-gray-600">/</span>
+                    <span class="text-accent font-semibold">Full-Stack Development</span>
                 </nav>
-                <p class="text-sm text-neon font-semibold uppercase tracking-wider section-label">// FULL_STACK_DEV — Lahore, Pakistan</p>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-50 mt-3">Full-Stack Web Development</h1>
-                <p class="text-lg text-gray-300 mt-4 max-w-3xl">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Full-Stack Development · Lahore, Pakistan</p>
+                <h1 class="service-page-title mt-3">Full-Stack Web Development</h1>
+                <p class="service-page-lead mt-4">
                     As a full stack developer in Pakistan, I build complete web applications — user interfaces, backend logic, database schemas, REST APIs and deployment. Based in Lahore, serving clients locally and internationally with React, Vue, Nuxt, Laravel and PHP.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Problems We Solve</h2>
+                <h2 class="service-section-title">Problems We Solve</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Split frontend and backend teams</h3>
-                        <p class="text-sm text-gray-400">When UI and API are built separately, integration bugs and mismatched data models slow delivery. Full-stack development keeps both layers aligned from day one.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Split frontend and backend teams</h3>
+                        <p class="text-sm text-muted">When UI and API are built separately, integration bugs and mismatched data models slow delivery. Full-stack development keeps both layers aligned from day one.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">MVP that needs to scale</h3>
-                        <p class="text-sm text-gray-400">Early prototypes built with shortcuts become hard to extend. We structure databases, APIs and frontend state so the codebase grows with your product.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">MVP that needs to scale</h3>
+                        <p class="text-sm text-muted">Early prototypes built with shortcuts become hard to extend. We structure databases, APIs and frontend state so the codebase grows with your product.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">No one owns deployment</h3>
-                        <p class="text-sm text-gray-400">Code that works locally but never reaches production. Full-stack delivery includes hosting setup, environment configuration and a documented deploy process.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">No one owns deployment</h3>
+                        <p class="text-sm text-muted">Code that works locally but never reaches production. Full-stack delivery includes hosting setup, environment configuration and a documented deploy process.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Legacy PHP without a path forward</h3>
-                        <p class="text-sm text-gray-400">Existing PHP applications that need new features, API layers or a modern frontend. Laravel provides a structured upgrade path without a full rewrite.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Legacy PHP without a path forward</h3>
+                        <p class="text-sm text-muted">Existing PHP applications that need new features, API layers or a modern frontend. Laravel provides a structured upgrade path without a full rewrite.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">What's Included</h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-400">
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Requirements analysis and technical scoping</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Frontend development (React, Vue or Nuxt)</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Backend development (Laravel, PHP or REST APIs)</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> MySQL database design and migrations</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Authentication and role-based access control</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Third-party API and payment integrations</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Responsive UI with Tailwind CSS</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Testing, deployment and handoff documentation</li>
+                <h2 class="service-section-title">What's Included</h2>
+                <ul class="service-list grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Requirements analysis and technical scoping</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Frontend development (React, Vue or Nuxt)</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Backend development (Laravel, PHP or REST APIs)</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> MySQL database design and migrations</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Authentication and role-based access control</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Third-party API and payment integrations</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Responsive UI with Tailwind CSS</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Testing, deployment and handoff documentation</li>
                 </ul>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Technologies</h2>
+                <h2 class="service-section-title">Technologies</h2>
                 <div class="flex flex-wrap gap-3">
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">React</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Vue.js</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Nuxt.js</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Laravel</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">PHP</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">MySQL</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">REST APIs</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Tailwind CSS</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Vite</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">JWT Authentication</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">React</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Vue.js</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Nuxt.js</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Laravel</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">PHP</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">MySQL</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">REST APIs</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Tailwind CSS</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Vite</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">JWT Authentication</span>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Development Process</h2>
+                <h2 class="service-section-title">Development Process</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">01</span><p class="text-gray-300 mt-1 text-sm font-semibold">Discovery</p><p class="text-gray-500 text-xs mt-1">Business goals, user flows and feature list</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">02</span><p class="text-gray-300 mt-1 text-sm font-semibold">Planning</p><p class="text-gray-500 text-xs mt-1">Stack choice, milestones and timeline</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">03</span><p class="text-gray-300 mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-gray-500 text-xs mt-1">Wireframes, ERD and API contract</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">04</span><p class="text-gray-300 mt-1 text-sm font-semibold">Development</p><p class="text-gray-500 text-xs mt-1">Sprint-based frontend and backend build</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">05</span><p class="text-gray-300 mt-1 text-sm font-semibold">Testing</p><p class="text-gray-500 text-xs mt-1">Cross-browser QA and API validation</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">06</span><p class="text-gray-300 mt-1 text-sm font-semibold">Deployment</p><p class="text-gray-500 text-xs mt-1">Server setup, SSL and go-live</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">07</span><p class="text-gray-300 mt-1 text-sm font-semibold">Maintenance</p><p class="text-gray-500 text-xs mt-1">Post-launch fixes and feature updates</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">01</span><p class="text-ink mt-1 text-sm font-semibold">Discovery</p><p class="text-slate-500 text-xs mt-1">Business goals, user flows and feature list</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">02</span><p class="text-ink mt-1 text-sm font-semibold">Planning</p><p class="text-slate-500 text-xs mt-1">Stack choice, milestones and timeline</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">03</span><p class="text-ink mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-slate-500 text-xs mt-1">Wireframes, ERD and API contract</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">04</span><p class="text-ink mt-1 text-sm font-semibold">Development</p><p class="text-slate-500 text-xs mt-1">Sprint-based frontend and backend build</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">05</span><p class="text-ink mt-1 text-sm font-semibold">Testing</p><p class="text-slate-500 text-xs mt-1">Cross-browser QA and API validation</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">06</span><p class="text-ink mt-1 text-sm font-semibold">Deployment</p><p class="text-slate-500 text-xs mt-1">Server setup, SSL and go-live</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">07</span><p class="text-ink mt-1 text-sm font-semibold">Maintenance</p><p class="text-slate-500 text-xs mt-1">Post-launch fixes and feature updates</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Related Work</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto mb-8">Full-stack builds include an eCommerce platform with payment integration, a CRM system with Laravel backend, and a hosting client portal with React dashboard.</p>
-                <a href="/#projects" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-dark-grid hover:shadow-neon transition duration-300 inline-block">View Portfolio Projects &rarr;</a>
+                <h2 class="service-section-title !mb-4">Related Work</h2>
+                <p class="text-muted max-w-2xl mx-auto mb-8">Full-stack builds include an eCommerce platform with payment integration, a CRM system with Laravel backend, and a hosting client portal with React dashboard.</p>
+                <a href="/#projects" class="btn-secondary inline-flex">View Portfolio Projects →</a>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">FAQ</h2>
+                <h2 class="service-section-title">FAQ</h2>
                 <div class="space-y-4">
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">What does full-stack development cover?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Everything from the browser UI to the server-side logic, database and deployment. You get one developer responsible for the entire application rather than coordinating separate frontend and backend contractors.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">What does full-stack development cover?</summary>
+                        <p class="text-muted text-sm mt-3">Everything from the browser UI to the server-side logic, database and deployment. You get one developer responsible for the entire application rather than coordinating separate frontend and backend contractors.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">React or Laravel — which do you recommend?</summary>
-                        <p class="text-gray-400 text-sm mt-3">It depends on the project. React excels for interactive SPAs and dashboards. Laravel is strong for business logic, admin panels and API backends. Most full-stack projects use both — React frontend with a Laravel API.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">React or Laravel — which do you recommend?</summary>
+                        <p class="text-muted text-sm mt-3">It depends on the project. React excels for interactive SPAs and dashboards. Laravel is strong for business logic, admin panels and API backends. Most full-stack projects use both — React frontend with a Laravel API.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">How long does a typical full-stack project take?</summary>
-                        <p class="text-gray-400 text-sm mt-3">A focused MVP with core features typically takes 4–8 weeks. Larger applications with multiple modules, integrations or user roles are scoped individually after discovery.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">How long does a typical full-stack project take?</summary>
+                        <p class="text-muted text-sm mt-3">A focused MVP with core features typically takes 4–8 weeks. Larger applications with multiple modules, integrations or user roles are scoped individually after discovery.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Do you provide source code and documentation?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Yes. All source code is delivered via Git repository. Basic setup documentation covers environment configuration, database migrations and deployment steps.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Do you provide source code and documentation?</summary>
+                        <p class="text-muted text-sm mt-3">Yes. All source code is delivered via Git repository. Basic setup documentation covers environment configuration, database migrations and deployment steps.</p>
                     </details>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-20 bg-mid-bg">
+        <section class="section-pad service-cta-band">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Start a Full-Stack Project</h2>
-                <p class="text-gray-400 mb-8">Tell us about your application requirements. Response within 1–2 business days.</p>
-                <a href="/#contact" class="px-8 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 border-2 border-neon inline-block">Get in Touch &gt;&gt;</a>
+                <h2 class="service-section-title !mb-4">Start a Full-Stack Project</h2>
+                <p class="text-muted mb-8">Tell us about your application requirements. Response within 1–2 business days.</p>
+                <a href="/#contact" class="btn-primary btn-shine inline-flex">Get in Touch</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark-grid border-t-2 border-neon shadow-neon">
-        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 font-code">
+    <button id="back-to-top" type="button" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <footer class="site-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-                <div><p class="text-neon font-bold mb-2">[root@ahad] $</p><p class="text-gray-400">Full-stack web development &amp; digital solutions from Lahore, Pakistan — serving clients worldwide.</p></div>
-                <div><p class="text-neon font-bold mb-2">Services</p><ul class="text-gray-500 space-y-1">
-                    <li><a href="/services/full-stack-development.html" class="hover:text-neon">Full-Stack Development</a></li>
-                    <li><a href="/services/laravel-development.html" class="hover:text-neon">Laravel Development</a></li>
-                    <li><a href="/services/react-development.html" class="hover:text-neon">React Development</a></li>
-                    <li><a href="/services/ecommerce-development.html" class="hover:text-neon">eCommerce</a></li>
-                    <li><a href="/services/seo.html" class="hover:text-neon">SEO Services</a></li>
-                </ul></div>
-                <div><p class="text-neon font-bold mb-2">Connect</p><ul class="text-gray-500 space-y-1">
-                    <li><a href="mailto:contact@abdulahad381.me" class="hover:text-neon">contact@abdulahad381.me</a></li>
-                    <li><a href="/#contact" class="hover:text-neon">Start a Project</a></li>
-                    <li><a href="/blog/" class="hover:text-neon">Blog</a></li>
-                </ul></div>
+                <div>
+                    <p class="footer-brand mb-2">AHADIX</p>
+                    <p>Digital solutions agency founded by Abdul Ahad. Websites, web apps, SEO, automation and digital growth for clients worldwide.</p>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2">Services</p>
+                    <ul class="space-y-1">
+                        <li><a href="/services/full-stack-development.html">Web Applications</a></li>
+                        <li><a href="/services/custom-software-development.html">Custom Software</a></li>
+                        <li><a href="/services/ecommerce-development.html">eCommerce</a></li>
+                        <li><a href="/services/seo.html">SEO &amp; Growth</a></li>
+                        <li><a href="/services/website-maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2">Connect</p>
+                    <ul class="space-y-1">
+                        <li><a href="mailto:contact@abdulahad381.me">contact@abdulahad381.me</a></li>
+                        <li><a href="/#contact">Start a Project</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gray-600 text-xs text-center mt-8">&copy; 2026 Abdul Ahad. Full-Stack Web Development &amp; Digital Solutions.</p>
+            <p class="text-white/40 text-xs text-center mt-10">&copy; 2026 AHADIX. Founded by Abdul Ahad.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

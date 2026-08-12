@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical SEO services from Lahore, Pakistan. Core Web Vitals, crawlability, structured data and on-page optimization for business websites worldwide.">
+    <meta name="description" content="Technical SEO, Core Web Vitals and on-page optimization to help your business website rank and convert. AHADIX.">
     <meta name="keywords" content="SEO services Pakistan, technical SEO Lahore, website optimization Pakistan, Core Web Vitals optimization">
     <meta name="author" content="Abdul Ahad">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Technical SEO Services | Website Optimization Pakistan">
-    <meta property="og:description" content="Technical SEO services from Lahore, Pakistan. Core Web Vitals, crawlability, structured data and on-page optimization for business websites worldwide.">
+    <meta property="og:title" content="Website SEO & Digital Growth Services | AHADIX">
+    <meta property="og:description" content="Technical SEO, Core Web Vitals and on-page optimization to help your business website rank and convert. AHADIX.">
     <meta property="og:image" content="https://abdulahad381.me/abc.png">
     <meta property="og:url" content="https://abdulahad381.me/services/seo.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Abdul Ahad — Full-Stack Development">
+    <meta property="og:site_name" content="AHADIX">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Technical SEO Services | Website Optimization Pakistan">
-    <meta name="twitter:description" content="Technical SEO from Lahore, Pakistan. Core Web Vitals, crawlability, structured data and on-page optimization for business sites.">
+    <meta name="twitter:title" content="Website SEO & Digital Growth Services | AHADIX">
+    <meta name="twitter:description" content="Technical SEO, Core Web Vitals and on-page optimization to help your business website rank and convert. AHADIX.">
     <meta name="twitter:image" content="https://abdulahad381.me/abc.png">
 
     <link rel="canonical" href="https://abdulahad381.me/services/seo.html">
     <link rel="icon" type="image/png" href="/abc.png">
 
-    <title>Technical SEO Services | Website Optimization Pakistan</title>
+    <title>Website SEO & Digital Growth Services | AHADIX</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0c1b2a',
+                        muted: '#5b6b7c',
+                        accent: '#0f6e6e',
+                        soft: '#e8eef2',
+                        page: '#f4f6f8'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', 'sans-serif'],
+                        display: ['Sora', 'Manrope', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
 
     <script type="application/ld+json">
@@ -69,179 +89,199 @@
     }
     </script>
 </head>
-<body class="bg-dark-grid text-gray-100 font-code">
+<body class="bg-page text-ink font-sans">
 
-    <header class="sticky top-0 z-50 bg-mid-bg shadow-lg border-b border-gray-700">
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" aria-label="Main navigation">
-            <a href="/" class="text-xl sm:text-2xl font-bold text-neon text-shadow-neon hover:text-green-400 transition duration-300 font-code">[root@ahad] $</a>
-            <div class="hidden lg:flex space-x-6 text-sm">
-                <a href="/" class="text-gray-400 hover:text-neon transition duration-300">HOME</a>
-                <a href="/services/" class="text-gray-400 hover:text-neon transition duration-300">SERVICES</a>
-                <a href="/#projects" class="text-gray-400 hover:text-neon transition duration-300">WORK</a>
-                <a href="/#contact" class="text-neon hover:text-green-400 transition duration-300 font-semibold">CONTACT</a>
+            <a href="/" class="brand-mark">AHAD<span>IX</span></a>
+            <div class="hidden lg:flex items-center gap-7">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/services/" class="nav-link">Services</a>
+                <a href="/#projects" class="nav-link">Work</a>
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="/#contact" class="btn-primary !py-2 !px-4 text-sm">Contact</a>
             </div>
-            <button class="lg:hidden text-gray-400 hover:text-neon focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+            <button class="lg:hidden text-ink focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-mid-bg border-t border-gray-700 pb-2">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
-                <a href="/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">HOME</a>
-                <a href="/services/" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">SERVICES</a>
-                <a href="/#projects" onclick="toggleMobileMenu()" class="text-gray-400 hover:text-neon block px-3 py-2 w-full">WORK</a>
-                <a href="/#contact" onclick="toggleMobileMenu()" class="text-neon block px-3 py-2 w-full">CONTACT</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute w-full bg-white border-t border-slate-200 shadow-lg">
+            <div class="px-4 py-3 flex flex-col gap-1">
+                <a href="/" onclick="toggleMobileMenu()" class="nav-link py-2">Home</a>
+                <a href="/services/" onclick="toggleMobileMenu()" class="nav-link py-2">Services</a>
+                <a href="/#projects" onclick="toggleMobileMenu()" class="nav-link py-2">Work</a>
+                <a href="/#about" onclick="toggleMobileMenu()" class="nav-link py-2">About</a>
+                <a href="/blog/" onclick="toggleMobileMenu()" class="nav-link py-2">Blog</a>
+                <a href="/#contact" onclick="toggleMobileMenu()" class="btn-primary mt-2 text-center">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="py-12 md:py-16 hero-bg-grid border-b border-gray-700">
+        <section class="service-hero py-12 md:py-16 border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="breadcrumb text-sm text-gray-500 mb-6 font-code" aria-label="Breadcrumb">
-                    <a href="/" class="hover:text-neon">Home</a><span class="mx-2 text-gray-600">/</span>
-                    <a href="/services/" class="hover:text-neon">Services</a><span class="mx-2 text-gray-600">/</span>
-                    <span class="text-neon">SEO Services</span>
+                <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-accent">Home</a><span class="mx-2 text-gray-600">/</span>
+                    <a href="/services/" class="hover:text-accent">Services</a><span class="mx-2 text-gray-600">/</span>
+                    <span class="text-accent font-semibold">SEO Services</span>
                 </nav>
-                <p class="text-sm text-neon font-semibold uppercase tracking-wider section-label">// TECH_SEO — Lahore, Pakistan</p>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-50 mt-3">Technical SEO Services</h1>
-                <p class="text-lg text-gray-300 mt-4 max-w-3xl">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Technical SEO · Lahore, Pakistan</p>
+                <h1 class="service-page-title mt-3">Technical SEO Services</h1>
+                <p class="service-page-lead mt-4">
                     Technical SEO fixes the foundation search engines need to crawl, index and rank your site. Based in Lahore, Pakistan, I audit and optimize site structure, page speed, Core Web Vitals, metadata and structured data — for business websites and web applications serving clients worldwide.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Problems We Solve</h2>
+                <h2 class="service-section-title">Problems We Solve</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Pages not appearing in search</h3>
-                        <p class="text-sm text-gray-400">Site live for months but Google shows few or no indexed pages. Crawlability issues — blocked robots.txt, missing sitemap, noindex tags or broken internal links — prevent discovery.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Pages not appearing in search</h3>
+                        <p class="text-sm text-muted">Site live for months but Google shows few or no indexed pages. Crawlability issues — blocked robots.txt, missing sitemap, noindex tags or broken internal links — prevent discovery.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Poor Core Web Vitals scores</h3>
-                        <p class="text-sm text-gray-400">Lighthouse reports failing LCP, CLS or INP metrics. Unoptimized images, render-blocking scripts and layout shifts hurt both user experience and search ranking signals.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Poor Core Web Vitals scores</h3>
+                        <p class="text-sm text-muted">Lighthouse reports failing LCP, CLS or INP metrics. Unoptimized images, render-blocking scripts and layout shifts hurt both user experience and search ranking signals.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">Duplicate or missing metadata</h3>
-                        <p class="text-sm text-gray-400">Every page sharing the same title tag, missing meta descriptions or absent Open Graph tags. Per-page metadata and canonical URLs tell search engines what each page is about.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">Duplicate or missing metadata</h3>
+                        <p class="text-sm text-muted">Every page sharing the same title tag, missing meta descriptions or absent Open Graph tags. Per-page metadata and canonical URLs tell search engines what each page is about.</p>
                     </div>
-                    <div class="bg-dark-grid border border-gray-700 rounded-xl p-6">
-                        <h3 class="text-neon font-bold mb-2">SPA with invisible content</h3>
-                        <p class="text-sm text-gray-400">React or Vue single-page app where search engines see an empty shell. Server-side rendering, pre-rendering or static generation makes content crawlable.</p>
+                    <div class="info-card">
+                        <h3 class="text-ink font-bold mb-2 font-display">SPA with invisible content</h3>
+                        <p class="text-sm text-muted">React or Vue single-page app where search engines see an empty shell. Server-side rendering, pre-rendering or static generation makes content crawlable.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">What's Included</h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-400">
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Technical SEO audit with prioritized findings</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Core Web Vitals analysis and performance fixes</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> XML sitemap creation and robots.txt review</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Per-page title tags and meta descriptions</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Structured data (JSON-LD) implementation</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Canonical URLs and duplicate content fixes</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Google Search Console setup and monitoring</li>
-                    <li class="flex items-start gap-3"><span class="text-neon mt-1">&gt;</span> Image optimization and lazy loading</li>
+                <h2 class="service-section-title">What's Included</h2>
+                <ul class="service-list grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Technical SEO audit with prioritized findings</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Core Web Vitals analysis and performance fixes</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> XML sitemap creation and robots.txt review</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Per-page title tags and meta descriptions</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Structured data (JSON-LD) implementation</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Canonical URLs and duplicate content fixes</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Google Search Console setup and monitoring</li>
+                    <li class="flex items-start gap-3"><span class="list-marker">✓</span> Image optimization and lazy loading</li>
                 </ul>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Technologies</h2>
+                <h2 class="service-section-title">Technologies</h2>
                 <div class="flex flex-wrap gap-3">
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Google Search Console</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Lighthouse</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Core Web Vitals</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">JSON-LD</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">XML Sitemaps</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Schema.org</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">Nuxt SSR / SSG</span>
-                    <span class="tech-card bg-dark-grid border border-gray-700 rounded px-4 py-2 text-sm text-gray-300">PageSpeed Insights</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Google Search Console</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Lighthouse</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Core Web Vitals</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">JSON-LD</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">XML Sitemaps</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Schema.org</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">Nuxt SSR / SSG</span>
+                    <span class="tech-card inline-block bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-600 mr-2 mb-2">PageSpeed Insights</span>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">Development Process</h2>
+                <h2 class="service-section-title">Development Process</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">01</span><p class="text-gray-300 mt-1 text-sm font-semibold">Discovery</p><p class="text-gray-500 text-xs mt-1">Site goals and target keywords</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">02</span><p class="text-gray-300 mt-1 text-sm font-semibold">Planning</p><p class="text-gray-500 text-xs mt-1">Audit scope and fix priority</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">03</span><p class="text-gray-300 mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-gray-500 text-xs mt-1">URL structure and page hierarchy</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">04</span><p class="text-gray-300 mt-1 text-sm font-semibold">Development</p><p class="text-gray-500 text-xs mt-1">Metadata, schema and speed fixes</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">05</span><p class="text-gray-300 mt-1 text-sm font-semibold">Testing</p><p class="text-gray-500 text-xs mt-1">Lighthouse re-test and crawl check</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">06</span><p class="text-gray-300 mt-1 text-sm font-semibold">Deployment</p><p class="text-gray-500 text-xs mt-1">Sitemap submit and index request</p></div>
-                    <div class="process-step bg-mid-bg pl-4 py-4 pr-2"><span class="text-neon font-bold">07</span><p class="text-gray-300 mt-1 text-sm font-semibold">Maintenance</p><p class="text-gray-500 text-xs mt-1">Monitoring and ongoing tweaks</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">01</span><p class="text-ink mt-1 text-sm font-semibold">Discovery</p><p class="text-slate-500 text-xs mt-1">Site goals and target keywords</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">02</span><p class="text-ink mt-1 text-sm font-semibold">Planning</p><p class="text-slate-500 text-xs mt-1">Audit scope and fix priority</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">03</span><p class="text-ink mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-slate-500 text-xs mt-1">URL structure and page hierarchy</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">04</span><p class="text-ink mt-1 text-sm font-semibold">Development</p><p class="text-slate-500 text-xs mt-1">Metadata, schema and speed fixes</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">05</span><p class="text-ink mt-1 text-sm font-semibold">Testing</p><p class="text-slate-500 text-xs mt-1">Lighthouse re-test and crawl check</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">06</span><p class="text-ink mt-1 text-sm font-semibold">Deployment</p><p class="text-slate-500 text-xs mt-1">Sitemap submit and index request</p></div>
+                    <div class="process-step pl-4 py-4 pr-3"><span class="text-accent font-bold font-display">07</span><p class="text-ink mt-1 text-sm font-semibold">Maintenance</p><p class="text-slate-500 text-xs mt-1">Monitoring and ongoing tweaks</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-mid-bg border-b border-gray-700">
+        <section class="section-pad bg-white border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Related Work</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto mb-8">SEO-aware development is built into every project — this portfolio site uses structured data, sitemaps, canonical URLs and optimized metadata as part of the development workflow.</p>
-                <a href="/#projects" class="px-6 py-3 border-2 border-neon text-neon font-semibold rounded-lg hover:bg-dark-grid hover:shadow-neon transition duration-300 inline-block">View Portfolio Projects &rarr;</a>
+                <h2 class="service-section-title !mb-4">Related Work</h2>
+                <p class="text-muted max-w-2xl mx-auto mb-8">SEO-aware development is built into every project — this portfolio site uses structured data, sitemaps, canonical URLs and optimized metadata as part of the development workflow.</p>
+                <a href="/#projects" class="btn-secondary inline-flex">View Portfolio Projects →</a>
             </div>
         </section>
 
-        <section class="py-16 bg-dark-grid border-b border-gray-700">
+        <section class="section-pad border-b border-slate-200/80">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-8">FAQ</h2>
+                <h2 class="service-section-title">FAQ</h2>
                 <div class="space-y-4">
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Technical SEO or content marketing?</summary>
-                        <p class="text-gray-400 text-sm mt-3">This service covers technical SEO — site structure, speed, crawlability and metadata. Content strategy, blog writing and link building are separate disciplines. Technical fixes ensure search engines can properly access and evaluate your existing content.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Technical SEO or content marketing?</summary>
+                        <p class="text-muted text-sm mt-3">This service covers technical SEO — site structure, speed, crawlability and metadata. Content strategy, blog writing and link building are separate disciplines. Technical fixes ensure search engines can properly access and evaluate your existing content.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">How long before SEO changes show results?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Technical fixes like sitemap submission and crawl error resolution can show indexing improvements within days to weeks. Ranking changes depend on competition, content quality and how long Google takes to re-crawl updated pages — typically weeks to months.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">How long before SEO changes show results?</summary>
+                        <p class="text-muted text-sm mt-3">Technical fixes like sitemap submission and crawl error resolution can show indexing improvements within days to weeks. Ranking changes depend on competition, content quality and how long Google takes to re-crawl updated pages — typically weeks to months.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Can you optimize a site you didn't build?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Yes. I audit WordPress, Laravel, React, static HTML and other platforms. Access to hosting, Search Console and the codebase (or CMS admin) is needed to implement fixes.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Can you optimize a site you didn't build?</summary>
+                        <p class="text-muted text-sm mt-3">Yes. I audit WordPress, Laravel, React, static HTML and other platforms. Access to hosting, Search Console and the codebase (or CMS admin) is needed to implement fixes.</p>
                     </details>
-                    <details class="faq-item bg-mid-bg rounded-lg p-4">
-                        <summary class="font-semibold text-gray-200 cursor-pointer">Is SEO included in new website builds?</summary>
-                        <p class="text-gray-400 text-sm mt-3">Basic technical SEO — semantic HTML, meta tags, sitemap, robots.txt and structured data — is included in every development project. Standalone SEO service is for auditing and fixing existing sites or advanced optimization needs.</p>
+                    <details class="faq-item rounded-xl p-4 bg-white">
+                        <summary class="font-semibold text-ink cursor-pointer">Is SEO included in new website builds?</summary>
+                        <p class="text-muted text-sm mt-3">Basic technical SEO — semantic HTML, meta tags, sitemap, robots.txt and structured data — is included in every development project. Standalone SEO service is for auditing and fixing existing sites or advanced optimization needs.</p>
                     </details>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-20 bg-mid-bg">
+        <section class="section-pad service-cta-band">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-neon text-shadow-neon mb-4">Start an SEO Project</h2>
-                <p class="text-gray-400 mb-8">Share your site URL and search visibility goals. Response within 1–2 business days.</p>
-                <a href="/#contact" class="px-8 py-3 bg-neon text-gray-900 font-semibold rounded-lg shadow-neon hover:shadow-neon-lg transition duration-300 border-2 border-neon inline-block">Get in Touch &gt;&gt;</a>
+                <h2 class="service-section-title !mb-4">Start an SEO Project</h2>
+                <p class="text-muted mb-8">Share your site URL and search visibility goals. Response within 1–2 business days.</p>
+                <a href="/#contact" class="btn-primary btn-shine inline-flex">Get in Touch</a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark-grid border-t-2 border-neon shadow-neon">
-        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 font-code">
+    <button id="back-to-top" type="button" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <footer class="site-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
-                <div><p class="text-neon font-bold mb-2">[root@ahad] $</p><p class="text-gray-400">Full-stack web development &amp; digital solutions from Lahore, Pakistan — serving clients worldwide.</p></div>
-                <div><p class="text-neon font-bold mb-2">Services</p><ul class="text-gray-500 space-y-1">
-                    <li><a href="/services/full-stack-development.html" class="hover:text-neon">Full-Stack Development</a></li>
-                    <li><a href="/services/laravel-development.html" class="hover:text-neon">Laravel Development</a></li>
-                    <li><a href="/services/react-development.html" class="hover:text-neon">React Development</a></li>
-                    <li><a href="/services/ecommerce-development.html" class="hover:text-neon">eCommerce</a></li>
-                    <li><a href="/services/seo.html" class="hover:text-neon">SEO Services</a></li>
-                </ul></div>
-                <div><p class="text-neon font-bold mb-2">Connect</p><ul class="text-gray-500 space-y-1">
-                    <li><a href="mailto:contact@abdulahad381.me" class="hover:text-neon">contact@abdulahad381.me</a></li>
-                    <li><a href="/#contact" class="hover:text-neon">Start a Project</a></li>
-                    <li><a href="/blog/" class="hover:text-neon">Blog</a></li>
-                </ul></div>
+                <div>
+                    <p class="footer-brand mb-2">AHADIX</p>
+                    <p>Digital solutions agency founded by Abdul Ahad. Websites, web apps, SEO, automation and digital growth for clients worldwide.</p>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2">Services</p>
+                    <ul class="space-y-1">
+                        <li><a href="/services/full-stack-development.html">Web Applications</a></li>
+                        <li><a href="/services/custom-software-development.html">Custom Software</a></li>
+                        <li><a href="/services/ecommerce-development.html">eCommerce</a></li>
+                        <li><a href="/services/seo.html">SEO &amp; Growth</a></li>
+                        <li><a href="/services/website-maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-white font-semibold mb-2">Connect</p>
+                    <ul class="space-y-1">
+                        <li><a href="mailto:contact@abdulahad381.me">contact@abdulahad381.me</a></li>
+                        <li><a href="/#contact">Start a Project</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gray-600 text-xs text-center mt-8">&copy; 2026 Abdul Ahad. Full-Stack Web Development &amp; Digital Solutions.</p>
+            <p class="text-white/40 text-xs text-center mt-10">&copy; 2026 AHADIX. Founded by Abdul Ahad.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

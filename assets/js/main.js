@@ -31,16 +31,16 @@
     function initTypingAnimation() {
         var typingTextElement = document.getElementById('typing-text');
         if (!typingTextElement || prefersReducedMotion) {
-            if (typingTextElement) typingTextElement.textContent = 'Full-Stack Developer';
+            if (typingTextElement) typingTextElement.textContent = 'Digital Solutions';
             return;
         }
 
         var words = [
-            'Full-Stack Developer',
-            'Laravel Developer',
-            'React Developer',
-            'API Integrator',
-            'Web Application Builder'
+            'Digital Solutions',
+            'Web Applications',
+            'eCommerce Stores',
+            'SEO & Growth',
+            'Business Automation'
         ];
         var wordIndex = 0;
         var charIndex = 0;
