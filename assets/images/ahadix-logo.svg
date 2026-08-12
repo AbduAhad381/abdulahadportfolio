@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="AHADIX">
+  <defs>
+    <linearGradient id="ahadix-bg" x1="8" y1="4" x2="42" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#148282"/>
+      <stop offset="1" stop-color="#0a5555"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="url(#ahadix-bg)"/>
+  <rect x="1.5" y="1.5" width="45" height="45" rx="13" stroke="#0c1b2a" stroke-opacity="0.18"/>
+  <path d="M24 11.5L35.2 36.2H30.4L27.85 30.1H20.15L17.6 36.2H12.8L24 11.5Z" fill="#ffffff"/>
+  <path d="M21.15 27.15h5.7L24 20.4 21.15 27.15Z" fill="#0c1b2a" fill-opacity="0.22"/>
+  <circle cx="24" cy="28.4" r="2.15" fill="#7fe3e3"/>
+  <circle cx="24" cy="28.4" r="3.4" stroke="#7fe3e3" stroke-opacity="0.45"/>
+</svg>
