@@ -589,20 +589,63 @@
         </section>
 
         <!-- PROCESS -->
-        <section id="process" class="section-pad bg-white border-b border-slate-200/80">
+        <section id="process" class="process-section section-pad border-b border-slate-200/80">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="section-title">Development Process</h2>
-                    <p class="section-sub">Clear steps from discovery to long-term support</p>
+                <div class="text-center mb-8 md:mb-10" data-aos="fade-up">
+                    <p class="eyebrow justify-center"><span class="status-dot" aria-hidden="true"></span> How we work</p>
+                    <h2 class="section-title mt-3">Development Process</h2>
+                    <p class="section-sub">A living 3D journey — from first conversation to long-term growth</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up"><span class="text-accent font-bold font-display">01</span><p class="text-ink mt-1 text-sm font-semibold">Discovery</p><p class="text-slate-500 text-xs mt-1">Goals, scope &amp; requirements</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="50"><span class="text-accent font-bold font-display">02</span><p class="text-ink mt-1 text-sm font-semibold">Planning</p><p class="text-slate-500 text-xs mt-1">Timeline, stack &amp; milestones</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="100"><span class="text-accent font-bold font-display">03</span><p class="text-ink mt-1 text-sm font-semibold">UI / Architecture</p><p class="text-slate-500 text-xs mt-1">Wireframes &amp; system design</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="150"><span class="text-accent font-bold font-display">04</span><p class="text-ink mt-1 text-sm font-semibold">Development</p><p class="text-slate-500 text-xs mt-1">Iterative build &amp; reviews</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="200"><span class="text-accent font-bold font-display">05</span><p class="text-ink mt-1 text-sm font-semibold">Testing</p><p class="text-slate-500 text-xs mt-1">QA, fixes &amp; validation</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="250"><span class="text-accent font-bold font-display">06</span><p class="text-ink mt-1 text-sm font-semibold">Deployment</p><p class="text-slate-500 text-xs mt-1">Launch &amp; hosting setup</p></div>
-                    <div class="process-step pl-4 py-4 pr-3" data-aos="fade-up" data-aos-delay="300"><span class="text-accent font-bold font-display">07</span><p class="text-ink mt-1 text-sm font-semibold">Maintenance</p><p class="text-slate-500 text-xs mt-1">Support &amp; growth</p></div>
+
+                <div class="process-stage" id="process-stage">
+                    <div class="process-stage__glow" aria-hidden="true"></div>
+                    <div class="process-stage__scene" id="process-scene">
+                        <article class="process-panel" data-step="0">
+                            <span class="process-panel__num">01</span>
+                            <h3 class="process-panel__title">Discovery</h3>
+                            <p class="process-panel__text">We map goals, scope and requirements so the build starts with clarity — not guesswork.</p>
+                        </article>
+                        <article class="process-panel" data-step="1">
+                            <span class="process-panel__num">02</span>
+                            <h3 class="process-panel__title">Planning</h3>
+                            <p class="process-panel__text">Timeline, stack and milestones are locked so you always know what happens next.</p>
+                        </article>
+                        <article class="process-panel" data-step="2">
+                            <span class="process-panel__num">03</span>
+                            <h3 class="process-panel__title">UI / Architecture</h3>
+                            <p class="process-panel__text">Wireframes and system design shape a product that looks premium and scales cleanly.</p>
+                        </article>
+                        <article class="process-panel" data-step="3">
+                            <span class="process-panel__num">04</span>
+                            <h3 class="process-panel__title">Development</h3>
+                            <p class="process-panel__text">Iterative builds with review checkpoints — you see progress, not a black box.</p>
+                        </article>
+                        <article class="process-panel" data-step="4">
+                            <span class="process-panel__num">05</span>
+                            <h3 class="process-panel__title">Testing</h3>
+                            <p class="process-panel__text">QA, fixes and validation across devices so launch feels stable and professional.</p>
+                        </article>
+                        <article class="process-panel" data-step="5">
+                            <span class="process-panel__num">06</span>
+                            <h3 class="process-panel__title">Deployment</h3>
+                            <p class="process-panel__text">Launch, hosting and DNS setup handled with a clean, production-ready handoff.</p>
+                        </article>
+                        <article class="process-panel" data-step="6">
+                            <span class="process-panel__num">07</span>
+                            <h3 class="process-panel__title">Maintenance</h3>
+                            <p class="process-panel__text">Ongoing support and growth so the product keeps performing after go-live.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="process-controls">
+                    <button type="button" class="process-nav-btn" id="process-prev" aria-label="Previous step">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="process-dots" id="process-dots" role="tablist" aria-label="Process steps"></div>
+                    <button type="button" class="process-nav-btn" id="process-next" aria-label="Next step">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                 </div>
             </div>
         </section>

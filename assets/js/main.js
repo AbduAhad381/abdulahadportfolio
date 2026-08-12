@@ -167,6 +167,7 @@
         initRevealOnScroll();
         initBackToTop();
         initCardTilt();
+        initProcessStage();
     }
 
     function initScrollProgress() {
@@ -392,6 +393,104 @@
                 card.style.transform = '';
             });
         });
+    }
+
+    function initProcessStage() {
+        var stage = document.getElementById('process-stage');
+        var scene = document.getElementById('process-scene');
+        var dotsWrap = document.getElementById('process-dots');
+        var prevBtn = document.getElementById('process-prev');
+        var nextBtn = document.getElementById('process-next');
+        if (!stage || !scene) return;
+
+        var panels = Array.prototype.slice.call(scene.querySelectorAll('.process-panel'));
+        var total = panels.length;
+        if (!total) return;
+
+        var active = 0;
+        var timer = null;
+        var reduced = prefersReducedMotion;
+
+        function shortestOffset(index, current) {
+            var raw = index - current;
+            var wrap = ((raw + total / 2) % total + total) % total - total / 2;
+            if (wrap === -total / 2) return 0;
+            return Math.round(wrap);
+        }
+
+        function render() {
+            panels.forEach(function (panel, i) {
+                var offset = shortestOffset(i, active);
+                if (offset > 3) offset = 3;
+                if (offset < -3) offset = -3;
+                panel.classList.toggle('is-active', i === active);
+                if (i === active) panel.removeAttribute('data-offset');
+                else panel.setAttribute('data-offset', String(offset));
+            });
+            if (dotsWrap) {
+                Array.prototype.forEach.call(dotsWrap.children, function (dot, i) {
+                    dot.classList.toggle('is-active', i === active);
+                    dot.setAttribute('aria-selected', i === active ? 'true' : 'false');
+                });
+            }
+        }
+
+        function goTo(index) {
+            active = (index + total) % total;
+            render();
+            restart();
+        }
+
+        function restart() {
+            if (reduced || document.hidden) return;
+            clearInterval(timer);
+            timer = setInterval(function () {
+                goTo(active + 1);
+            }, 3200);
+        }
+
+        if (dotsWrap) {
+            panels.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'process-dot';
+                dot.setAttribute('aria-label', 'Go to step ' + (i + 1));
+                dot.addEventListener('click', function () { goTo(i); });
+                dotsWrap.appendChild(dot);
+            });
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { goTo(active - 1); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goTo(active + 1); });
+
+        panels.forEach(function (panel, i) {
+            panel.addEventListener('click', function () {
+                if (i !== active) goTo(i);
+            });
+        });
+
+        if (!reduced && window.innerWidth >= 768) {
+            stage.addEventListener('mousemove', function (e) {
+                var rect = stage.getBoundingClientRect();
+                var x = (e.clientX - rect.left) / rect.width - 0.5;
+                var y = (e.clientY - rect.top) / rect.height - 0.5;
+                scene.style.transform = 'rotateY(' + (x * 10) + 'deg) rotateX(' + (-y * 6) + 'deg)';
+            });
+            stage.addEventListener('mouseleave', function () {
+                scene.style.transform = '';
+            });
+        }
+
+        stage.addEventListener('mouseenter', function () { clearInterval(timer); });
+        stage.addEventListener('mouseleave', restart);
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) clearInterval(timer);
+            else restart();
+        });
+
+        render();
+        restart();
     }
 
     document.addEventListener('DOMContentLoaded', function () {
